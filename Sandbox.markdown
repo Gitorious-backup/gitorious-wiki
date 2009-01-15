@@ -35,4 +35,4 @@ in order:
 * [[FooBarBaz]]
 * BazBarFoo
 
-And now some ``CamelCase InlineCode``.
+And now some `CamelCase InlineCode`.
