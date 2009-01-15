@@ -18,13 +18,12 @@ about setting up the application for specific linux distributions such as
 CenOS and Ubuntu/Debian
 
 
-===========================================================================
 
 Installation to a production environment -- a partial walkthrough.
+==================================================================
 
-===========================================================================
-
-=== Make ready
+Make ready
+----------
 
 You may want to make separate directories, away from everything, to hold the
 site code and the git repository respectively.  In production, you'll be setting
@@ -41,7 +40,8 @@ All of these can be adjusted to suit: specifically, dirs within your home
 directory are fine, and (though MySQL has the best development coverage), the
 website code should be free of mysql-isms/quirks.
 
-=== Dependencies
+Dependencies
+--------------
 
 First, install each of these Libraries/applications:
 
@@ -55,9 +55,9 @@ First, install each of these Libraries/applications:
 
 Next, get the gitorious code itself:
 
-  # mkdir /www/gitorious
-  # cd    /www/gitorious
-  # git clone git://gitorious.org/gitorious/repositories/mainline.git gitorious
+    # mkdir /www/gitorious
+    # cd    /www/gitorious
+    # git clone git://gitorious.org/gitorious/repositories/mainline.git gitorious
 
 Install each of these Ruby libraries/bindings/gems:
 
@@ -74,10 +74,11 @@ Install each of these Ruby libraries/bindings/gems:
 * ruby-openid   
 * ruby-iconv
 
-  # gem install mysql RedCloth mime-types oniguruma textpow \
-      chronic rmagick geoip ultrasphinx ruby-openid 
+    # gem install mysql RedCloth mime-types oniguruma textpow \
+        chronic rmagick geoip ultrasphinx ruby-openid 
 
-=== Database
+Database
+--------------
 
 First we need a database.  Use the mysql command line app, or phpMyAdmin, or
 whatever to create first a user.  Referring to
@@ -100,42 +101,43 @@ Ruby on Rails config file, not specific to gitorious -- if you have questions
 here they're answered on the web, or consult the rails IRC channel.  (One hint:
 NO TABS AT ALL in a .yml file.)  Our example:
 
-development: 
-  adapter:      mysql
-  username:     git
-  password:     awesome_password
-  host:         localhost
-  database:     git_dev
+    development: 
+      adapter:      mysql
+      username:     git
+      password:     awesome_password
+      host:         localhost
+      database:     git_dev
 
-# The 'test' database will be erased and re-generated from your development
-# database when you run 'rake'.  Must be different than the others!!
-test:
-  adapter:      mysql
-  username:     git
-  password:     awesome_password
-  host:         localhost
-  database:     git_test
+    # The 'test' database will be erased and re-generated from your development
+    # database when you run 'rake'.  Must be different than the others!!
+    test:
+      adapter:      mysql
+      username:     git
+      password:     awesome_password
+      host:         localhost
+      database:     git_test
 
-production:
-  adapter:      mysql
-  username:     git
-  password:     awesome_password
-  host:         localhost
-  database:     git_prod
+    production:
+      adapter:      mysql
+      username:     git
+      password:     awesome_password
+      host:         localhost
+      database:     git_prod
 
----
+
 
 Use rake to create the databases, migrate each, and run the tests:
 
-rake db:create:all
-for RAILS_ENV in development test production ; do
-  rake db:migrate
-done
-rake test
+    rake db:create:all
+    for RAILS_ENV in development test production ; do
+      rake db:migrate
+    done
+    rake test
 
 FTW!
 
-=== Gitorious config
+Gitorious config
+--------------
   
 * Copy the config/gitorious.sample.yml file to config/gitorious.yml
 
@@ -159,31 +161,34 @@ FTW!
   gitorious_user:               gitslave
   
 
-=== Get Sphinx going
-for RAILS_ENV in development test production ; do
-  RAILS_ENV=$RAILS_ENV rake ultrasphinx:configure
-  RAILS_ENV=$RAILS_ENV rake ultrasphinx:index
-done
-RAILS_ENV=production rake ultrasphinx:daemon:start &
+Get Sphinx going
+--------------
 
-=== Tweak environment
+    for RAILS_ENV in development test production ; do
+      RAILS_ENV=$RAILS_ENV rake ultrasphinx:configure
+      RAILS_ENV=$RAILS_ENV rake ultrasphinx:index
+    done
+    RAILS_ENV=production rake ultrasphinx:daemon:start &
+
+
+Tweak environment
+------------------
 
 * In environment.rb, uncomment config.action_controller.session -- choose a new
   session key string and generate your own secret key using something like
     (uptime; date) |sha1sum
-
 * If you haven't set up your mailer, production mode will fail on login. Set
     config.action_mailer.delivery_method = :test
   for immediate gratification.
 
   
-=== Run the server
+Run the server
+--------------
 
 From the gitorious directory,
 
-# ./script/server
-
-# RAILS_ENV=production ./script/server
+    # ./script/server
+    # RAILS_ENV=production ./script/server
 
 It should start up on port 3000, listening only to local connections.  Ue "ssh
 -L 3000:127.0.0.1:3000 -N you@yourbox.com" for testing.
@@ -192,16 +197,18 @@ You can now visit the site, sign up with your OpenID, put in your ssh key, and
 poke around!  Once you get bored, make a test repository, wonder why nothing is
 there yet, and then....
 
-=== Hand-start the task_performer 
+Hand-start the task_performer 
+--------------
 
 Key adoption, repo generation and other tasks are handled by the
 'task_performer' script, which must be run periodically or on demand.
 Run the script/task_performer and let it create the repository for you.
 
-  # ./script/task_performer
+    # ./script/task_performer
 
    
-4. Get your git on!
+Get your git on!
+--------------
 
 Push something to that repository (cd to a git repository with commits and do
 "git push path/to/the/bare/repository/you/just/created master").  The actual
@@ -212,25 +219,27 @@ Ex: the fubar project's mainline fork sits in a directory called
 
 This will be a 'bare' git repo -- you won't see files in it.
 
-=== Button up
+Button up
+--------------
 
 * In production, you'll want to have a limited-privileges user to run the git
   processes, just as you do for your webserver
-
 * Make the tree invisible to any other non-root user; make the tree read-only by
   that user; but grant write access to the /tmp and /public/cache directories.
-
 * Consider setting up the standard (lighttpd|nginx|apache) frontend <=> mongrel
   backend if you see traffic.
 
 
-=== More Help
+More Help
+--------------
 
 * Consult the mailinglist (http://groups.google.com/group/gitorious) or drop in
   by #gitorious on irc.freenode.net if you have questions.
 
-=== Gotchas
+Gotchas
+--------------
 
 Gitorious will add a 'forced command' to your ~/.ssh/authorized_keys file for
 the target host: if you start finding ssh oddities suspect this first.  Don't
 log out until you've ensured you can still log in remotely.
+
