@@ -36,3 +36,5 @@ in order:
 * BazBarFoo
 
 And now some `CamelCase InlineCode`.
+
+`This entire line is InlineCode with a few CamelCase words interspersed.`
