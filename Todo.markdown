@@ -3,6 +3,7 @@
 * atom feed of wiki page history
 * opt out of wiki project setting
 * Better wiki css
+* Filtering of events on the project index page ("don't show wiki edits" etc)
 * be able to clone the wiki repository
 * be able to push to the wiki repository (project admins only?)
 * Add multiple emails to a user account so user will be recognized when pushing
