@@ -25,3 +25,9 @@ in order:
 
 > There's many great quotes in this world, 
 > this is not one of them
+
+##Some internal links
+* [[ToDo]]
+* [[foo_bar]]
+* [[BarFoo]]
+* BazBlah
