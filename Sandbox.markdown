@@ -40,3 +40,5 @@ And now some `CamelCase InlineCode`.
 `This entire line is InlineCode with a few CamelCase words interspersed.`
 
 An [ExternalLink](http://example.com).
+
+How about <a href="http://example.com/RawHtml>RawHtml</a>, which is allowed in markdown.
