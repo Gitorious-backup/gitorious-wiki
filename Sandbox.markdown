@@ -38,3 +38,5 @@ in order:
 And now some `CamelCase InlineCode`.
 
 `This entire line is InlineCode with a few CamelCase words interspersed.`
+
+An [ExternalLink](http://example.com).
