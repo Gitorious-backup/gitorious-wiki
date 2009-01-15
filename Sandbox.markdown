@@ -33,3 +33,4 @@ in order:
 * BazBlah
 * [[Blah-Baz]]
 * [[FooBarBaz]]
+* BazBarFoo
