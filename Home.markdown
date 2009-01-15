@@ -4,7 +4,7 @@ Gitorious is an opensource application originally developed for hosting open sou
 
 ## Community
 
-This wiki is intended for the community, feel free to add or edit content.
+This wiki is intended for the community, feel free to add or edit content. There's also a [mailinglist](http://groups.google.com/group/gitorious) and the `#gitorious` channel on `irc.freenode.net`.
 
 [[Sandbox]] for the curious...
 
