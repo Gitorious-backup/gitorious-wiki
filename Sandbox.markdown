@@ -41,4 +41,4 @@ And now some `CamelCase InlineCode`.
 
 An [ExternalLink](http://example.com).
 
-How about <a href="http://example.com/RawHtml>RawHtml</a>, which is allowed in markdown.
+How about <a href="http://example.com/RawHtml">RawHtml</a>, which is allowed in markdown.
