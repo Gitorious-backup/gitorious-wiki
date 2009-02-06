@@ -1,1 +1,2 @@
-Marcos Hack <marcoshack at gmail dot com>
+Marcos Hack
+http://marcoshack.blogspot.com/
