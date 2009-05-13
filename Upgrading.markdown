@@ -6,7 +6,7 @@ First things first, backup your database.
 
 ### New library/server depencies
 
-  * An ActiveMessaging compatible queue server. Gitorious.org runs ActiveMQ and STOMP, stompserver might be a nice flyweight alternative for your needs
+  * An [ActiveMessaging](http://code.google.com/p/activemessaging/wiki/ActiveMessaging) compatible queue server. Gitorious.org runs [ActiveMQ](http://activemq.apache.org/) and STOMP, [stompserver](http://stompserver.rubyforge.org/) might be a nice flyweight alternative for your needs
   
   
 ### Gems
