@@ -49,6 +49,19 @@ Once you've checkout the new Gitorious codebase, start up the console:
 
 This is needed because gitorious previously missed some `:dependent` hooks on the Project and User classes, if you don't do this, migrations will fail.
 
+### Changes in Gitorious.yml
+
+The config/gitorious.yml file now is organized like config/database.yml; that is a section for each of your Rails environments. This will typically lead to an error like 
+
+     undefined method `[]' for nil:NilClass
+
+To resolve this, add a section for at least the development env, like so:
+
+    development:
+        gitorious_client_port: 3000
+        gitorious_client_host: gitorious.local
+
+Check config/gitorious.sample.yml for a sample.
 
 ### rake migrate
 
