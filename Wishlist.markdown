@@ -1,3 +1,4 @@
+* tarballs should contain one directory (preferably matching the basename of the tarball) with all the files in it
 * display the year of commits (currently I only see the day and month)
 * set up an Admin profile - superuser installed by default [DONE!]
 * set up an Admin interface - manage users, daemon status [DONE!]
