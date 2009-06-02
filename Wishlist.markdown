@@ -1,3 +1,4 @@
+* display the year of commits (currently I only see the day and month)
 * set up an Admin profile - superuser installed by default [DONE!]
 * set up an Admin interface - manage users, daemon status [DONE!]
 * make it more configurable (logo, basic color theme at least)
