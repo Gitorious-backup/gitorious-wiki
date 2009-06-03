@@ -20,3 +20,4 @@ Please feel free to add bugs and/or feature requests below.
     * newest projects
     * projects with more activity
     * forking history visualization (graphical)
+* Integration with a bugtracker (or ticketing system)
