@@ -10,7 +10,7 @@ This wiki is intended for the community, feel free to add or edit content. There
 
 ## Documentation
 
-* [[Wishlist]] suggest features you want or need
+* [[Wishlist]] request features or submit bugs
 * [[Todo]] a random collection of things close on the horizon
 * [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu
 * [[Upgrading]]
