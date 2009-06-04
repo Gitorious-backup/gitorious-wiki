@@ -1,6 +1,7 @@
 Please feel free to add bugs and/or feature requests below.
 
 ## Bugs
+* Edit team page lacks button to "Delete current team image" (the edit person page has this)
 * tarballs should contain one directory (preferably matching the basename of the tarball) with all the files in it
 * display the year of commits (currently I only see the day and month) [[merged](http://gitorious.org/gitorious/mainline/commit/30f136bb75230b2d607bbe64581e60624a5e9269)]
 
