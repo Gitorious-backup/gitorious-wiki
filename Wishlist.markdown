@@ -21,4 +21,5 @@ Please feel free to add bugs and/or feature requests below.
     * newest projects
     * projects with more activity
     * forking history visualization (graphical)
+* a simple bugtracker implementation inside gitorious
 * Integration with a bugtracker (or ticketing system)
