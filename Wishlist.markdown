@@ -23,3 +23,4 @@ Please feel free to add bugs and/or feature requests below.
     * forking history visualization (graphical)
 * a simple bugtracker implementation inside gitorious
 * Integration with a bugtracker (or ticketing system)
+* Some sort of 'powered by gitorious' banners. I would be more than glad of placing it on my project's website
