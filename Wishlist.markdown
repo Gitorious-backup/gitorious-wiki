@@ -3,9 +3,10 @@ Please feel free to add bugs and/or feature requests below.
 ## Bugs
 * Edit team page lacks button to "Delete current team image" (the edit person page has this)
 * tarballs should contain one directory (preferably matching the basename of the tarball) with all the files in it
-* display the year of commits (currently I only see the day and month) [[merged](http://gitorious.org/gitorious/mainline/commit/30f136bb75230b2d607bbe64581e60624a5e9269)]
+* display the year of commits [[merged](http://gitorious.org/gitorious/mainline/commit/30f136bb75230b2d607bbe64581e60624a5e9269)] [DONE!]
 
 ## Feature Requests
+* commits on main project page and main repo page (eg [here](http://gitorious.org/wfpl) and [here](http://gitorious.org/wfpl/wfpl)) should recognize e-mail aliases of commiters (as set under "manage aliases"). Specifically, these should link their name to their gitorious account and show the [gr]avitar from the primary e-mail
 * make diff's "side-by-side" mode show changed lines with one table row. eg [here](http://gitorious.org/wfpl/wfpl/commit/532d75b922c5e4e2e39172b6fe3c4b2153ffc28d?diffmode=sidebyside).
 * set up an Admin profile - superuser installed by default [DONE!]
 * set up an Admin interface - manage users, daemon status [DONE!]
