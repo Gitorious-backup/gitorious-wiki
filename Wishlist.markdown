@@ -1,7 +1,7 @@
 Please feel free to add bugs and/or feature requests below.
 
 ## Bugs
-* Edit team page lacks button to "Delete current team image" (the edit person page has this)
+* Edit team page lacks button to "Delete current team image" (the edit person page has this) [DONE]
 * tarballs should contain one directory (preferably matching the basename of the tarball) with all the files in it
 * display the year of commits [[merged](http://gitorious.org/gitorious/mainline/commit/30f136bb75230b2d607bbe64581e60624a5e9269)] [DONE!]
 
@@ -24,4 +24,5 @@ Please feel free to add bugs and/or feature requests below.
     * forking history visualization (graphical)
 * a simple bugtracker implementation inside gitorious
 * Integration with a bugtracker (or ticketing system)
-* Some sort of 'powered by gitorious' banners. I would be more than glad of placing it on my project's website
+* Some sort of 'powered by gitorious' banners. I would be more than glad of placing it on my project's website 
+    * feel free to use http://gitorious.org/images/powered_by_gitorious.png (licensed under the same as the logo, see the about page)
