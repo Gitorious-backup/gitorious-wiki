@@ -13,11 +13,10 @@ I did it on Ubuntu Jaunty server edition at work and also Kubuntu Jaunty on my l
 Maybe I will try to handle the UltraSphinx daemon too, but for some reason I haven't done that yet.
 
 Craig Websters words from 2008-12-13 13:34 helped me a lot:
-[link](http://barkingiguana.com/2008/11/28/running-daemontools-under-ubuntu-810)
+[http://barkingiguana.com/2008/11/28/running-daemontools-under-ubuntu-810](http://barkingiguana.com/2008/11/28/running-daemontools-under-ubuntu-810)
    
 Should be said that I don't know the proper size of softlimits and stuff... 
-Just copied it from 
-[link](http://barkingiguana.com/2008/11/28/running-daemontools-under-ubuntu-810)
+I just copied it...
 
 Daemontools (and don't confuse it with some virtual CD stuff for win... ) is very good 
 because it supervises the daemons and restarts them in case they die. 
