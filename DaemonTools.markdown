@@ -30,7 +30,7 @@ You have to set up the daemon and also the log for it so you can see if anything
       sudo chown -R activemq /usr/local/apache-activemq-5.2.0/data
       sudo mkdir -p /usr/local/apache-activemq-5.2.0/service/activemq/{,log,log/main}
 
-      sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/run
+sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/run
 
 `#!/bin/sh` 
 
@@ -47,7 +47,7 @@ setuidgid $USER \
 ************** activemq log **************
 ******************************************
 
-      sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/log/run
+sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/log/run
 
 `#!/bin/sh`
 
@@ -73,9 +73,9 @@ exec setuidgid $USER multilog t s1000000 n10 ./main
 ************** poller **************
 ************************************
 
-      sudo mkdir -p /home/git/service/poller/{,log,log/main}
+sudo mkdir -p /home/git/service/poller/{,log,log/main}
 
-      sudo nano    /home/git/service/poller/run
+sudo nano    /home/git/service/poller/run
 
 `#!/bin/sh`
 
@@ -122,9 +122,9 @@ exec setuidgid $USER multilog t s1000000 n10 ./main
 ************** git-daemon **************
 ****************************************
 
-     sudo mkdir -p /home/git/service/git-daemon/{,log,log/main}
+sudo mkdir -p /home/git/service/git-daemon/{,log,log/main}
 
-  sudo nano    /home/git/service/git-daemon/run
+sudo nano    /home/git/service/git-daemon/run
 
 `#!/bin/sh`
 
