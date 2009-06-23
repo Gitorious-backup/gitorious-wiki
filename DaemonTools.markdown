@@ -25,7 +25,7 @@ You have to set up the daemon and also the log for it so you can see if anything
 
 
 **************************************
-************** activemq **************
+************** #activemq# **************
 **************************************
 
       sudo adduser --system activemq
