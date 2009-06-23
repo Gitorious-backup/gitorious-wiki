@@ -57,7 +57,7 @@ USER=activemq
 exec setuidgid $USER multilog t s1000000 n10 ./main
 
 ***********************************************************************
-#activemq rights, ownership and soft-links#
+##activemq rights, ownership and soft-links#
 ***********************************************************************
 
       sudo sh -c "find /usr/local/apache-activemq-5.2.0/service/activemq -name 'run' |xargs chmod +x,go-wr"
@@ -93,7 +93,7 @@ exec setuidgid $USER envdir ./env /var/www/gitorious/script/poller run
 
 
 ****************************************
-#poller log#
+##poller log#
 ****************************************
 
 sudo nano      /home/git/service/poller/log/run
@@ -105,7 +105,7 @@ exec setuidgid $USER multilog t s1000000 n10 ./main
 
 
 *********************************************************************
-#poller rights, ownership and soft-links#
+##poller rights, ownership and soft-links#
 *********************************************************************
 
 
@@ -140,7 +140,7 @@ setuidgid $USER \
 
 
 ********************************************
-#git-daemon log#
+##git-daemon log#
 ********************************************
 
 sudo nano      /home/git/service/git-daemon/log/run
@@ -151,7 +151,7 @@ USER=git
 exec setuidgid $USER multilog t s1000000 n10 ./main
 
 *************************************************************************
-#git-daemon rights, ownership and soft-links#
+##git-daemon rights, ownership and soft-links#
 *************************************************************************
 
       sudo sh -c "find /home/git/service/git-daemon -name 'run' |xargs chmod +x,go-wr"
