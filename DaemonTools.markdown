@@ -165,8 +165,6 @@ exec setuidgid $USER multilog t s1000000 n10 ./main
 Beginning to see a pattern here? 
 
 Should be said that I don't know the proper size of the softlimits and stuff... 
-Just copied it from http://barkingiguana.com/2008/12/13/deploying-activemq-on-ubuntu-810
-
 
 I have also put a 
 svc -t /etc/service/poller
