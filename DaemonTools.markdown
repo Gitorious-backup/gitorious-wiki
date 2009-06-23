@@ -8,6 +8,7 @@ Dear all
 3. git-daemon
 
 
+
 I did it on Ubuntu Jaunty server edition at work and also Kubuntu Jaunty on my laptop.
 
 Maybe I will try to handle the UltraSphinx daemon too, but for some reason I haven't done that yet.
