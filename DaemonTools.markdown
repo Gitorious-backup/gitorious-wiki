@@ -46,7 +46,7 @@ setuidgid $USER \
 
 
 ******************************************
-#activemq log#
+##activemq log#
 ******************************************
 
 sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/log/run
