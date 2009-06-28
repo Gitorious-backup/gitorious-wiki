@@ -27,3 +27,4 @@ Please feel free to add bugs and/or feature requests below.
 * Integration with a bugtracker (or ticketing system)
 * Some sort of 'powered by gitorious' banners. I would be more than glad of placing it on my project's website 
     * feel free to use http://gitorious.org/images/powered_by_gitorious.png (licensed under the same as the logo, see the about page)
+* It would be nice if repositories in a project were ordered (eg http://gitorious.org/mer )
