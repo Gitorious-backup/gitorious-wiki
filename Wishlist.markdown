@@ -35,3 +35,4 @@ Please feel free to add bugs and/or feature requests below.
 * Stick links to my projects and repos on the homepage - 90% of the time I come to Gitorious to see the projects I'm involved with, not to browse the most popular or recently-pushed-to projects
 * Projects should have the option to set a project image
 * Site admin should have access to all project properties not only via database backend, but also via gitorious frontend - this could be accomplished with an impersonate user option, realized like e.g. in bugzilla.
+* API
