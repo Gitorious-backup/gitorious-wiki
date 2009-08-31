@@ -36,3 +36,4 @@ Please feel free to add bugs and/or feature requests below.
 * Projects should have the option to set a project image
 * Site admin should have access to all project properties not only via database backend, but also via gitorious frontend - this could be accomplished with an impersonate user option, realized like e.g. in bugzilla.
 * API
+* I am getting swamped by merge request-emails of a project I'm just partly involved with and therefor it would be nice to have a per-group option to receive emails from clone/merge-requests.
