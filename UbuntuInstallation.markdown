@@ -44,8 +44,8 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
 * Install Passenger
         /var/lib/gems/1.8/bin/passenger-install-apache2-module 
 * Create /etc/apache2/mods-available/passenger.load:
-        LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.4/ext/apache2/mod_passenger.so
-        PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.4
+        LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so
+        PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.5
         PassengerRuby /usr/bin/ruby1.8
 * Enable needed modules
         a2enmod passenger  
