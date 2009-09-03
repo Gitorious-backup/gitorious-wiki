@@ -37,3 +37,4 @@ Please feel free to add bugs and/or feature requests below.
 * Site admin should have access to all project properties not only via database backend, but also via gitorious frontend - this could be accomplished with an impersonate user option, realized like e.g. in bugzilla.
 * API
 * I am getting swamped by merge request-emails of a project I'm just partly involved with and therefor it would be nice to have a per-group option to receive emails from clone/merge-requests.
+* Cloned projects should do a nightly fetch-pack.  Imagine me creating a clone on the site, I download it and weeks later want to merge with upstream. I need to download the diffs from the original project. Thats fine. Then I merge locally and to my surprise I need to upload all those objects again (slow!).  What about a nightly fetch pack so the server already has those objects.
