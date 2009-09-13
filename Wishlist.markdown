@@ -6,6 +6,10 @@ Please feel free to add bugs and/or feature requests below.
 * display the year of commits [[merged](http://gitorious.org/gitorious/mainline/commit/30f136bb75230b2d607bbe64581e60624a5e9269)] [DONE!]
 * When showing commits for a branch, whatever occurs after the "-" in the branch name is ignored and the commits for /^(.*?)-/ are shown
   * Example: http://gitorious.org/~br3nda/laconica/br3nda/commits/0.8.x-attachmentfix -> shows the commits for 0.8.x (note that if the branch 0.8.x was deleted, it would show the commits for 0.8.x-attachmentfix)
+* There's a bug in the Markdown parser/formatter. Sometimes the code block is accidentally closed. Here's a minimal example:
+  * foo
+        bar
+    }
 
 ## Feature Requests
 * on project/repo pages where it says the license, it should link to the license page. The [FSF recently added RDF data for license permissions to the html versions of their licenses](http://www.fsf.org/blogs/licensing/2009-06-rdf) so we should get that rel="license" in there for the web crawlers.
