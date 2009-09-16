@@ -10,6 +10,8 @@ Please feel free to add bugs and/or feature requests below.
   * foo
         bar
     }
+* "Activities" lists display only the first line of a commit message, whether that commit message contains text or not.   To fix:  remove leading whitespace 
+  from commit messages before displaying in activities list.
 
 ## Feature Requests
 * on project/repo pages where it says the license, it should link to the license page. The [FSF recently added RDF data for license permissions to the html versions of their licenses](http://www.fsf.org/blogs/licensing/2009-06-rdf) so we should get that rel="license" in there for the web crawlers.
