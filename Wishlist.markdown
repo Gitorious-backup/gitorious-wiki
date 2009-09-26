@@ -12,6 +12,7 @@ Please feel free to add bugs and/or feature requests below.
     }
 * "Activities" lists display only the first line of a commit message, whether that commit message contains text or not.   To fix:  remove leading whitespace 
   from commit messages before displaying in activities list.
+* On an 800x480 screen resolution (i.e. an Eee), the login form is completely pushed off the right side of the page - and is still hidden when scrolling to the right (I have to visit /sessions manually to be able to log in when I'm using my Eee)
 
 ## Feature Requests
 * on project/repo pages where it says the license, it should link to the license page. The [FSF recently added RDF data for license permissions to the html versions of their licenses](http://www.fsf.org/blogs/licensing/2009-06-rdf) so we should get that rel="license" in there for the web crawlers.
