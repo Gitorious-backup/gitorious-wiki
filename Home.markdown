@@ -14,3 +14,4 @@ This wiki is intended for the community, feel free to add or edit content. There
 * [[Todo]] a random collection of things close on the horizon
 * [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu
 * [[Upgrading]]
+* [[GitoriousComponents]] A description of Gitorious' various parts
