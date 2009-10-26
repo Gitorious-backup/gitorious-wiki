@@ -42,3 +42,5 @@ And now some `CamelCase InlineCode`.
 An [ExternalLink](http://example.com).
 
 How about <a href="http://example.com/RawHtml">RawHtml</a>, which is allowed in markdown.
+
+An image: ![Image](http://gitorious.org/images/logo-cube-text.png)
