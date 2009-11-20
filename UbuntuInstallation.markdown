@@ -1,4 +1,4 @@
-Note: This documentation seems to be outdated. A more current version can be found here: http://cjohansen.no/en/ruby/setting_up_gitorious_on_your_own_server
+Note: This documentation seems to be outdated. A more current version can be found here: [Setting up gitorious on your own server](http://cjohansen.no/en/ruby/setting_up_gitorious_on_your_own_server)
 
 The following steps should take you from a freshly installed copy of Ubuntu Server 9.04 to a fully functioning Gitorious server.
 
