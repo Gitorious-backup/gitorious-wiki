@@ -15,6 +15,7 @@ Please feel free to add bugs and/or feature requests below.
 * On an 800x480 screen resolution (i.e. an Eee), the login form is completely pushed off the right side of the page - and is still hidden when scrolling to the right (I have to visit /sessions manually to be able to log in when I'm using my Eee)
 * Branches with the '+' character don't show up in the web interface.
 * Branches with the '=' character don't show up in the dropdown when putting in a merge request
+* Merge request numbering got messed up around end of nov 2009. E.g. http://qt.gitorious.org/qt/qt/merge_requests/402 shows "2374" as the MR number in the top navigation bar, and indeed previous merge requests had a higher number, somehow it went back to small numbers again. I guess this one -should- have been 2374, not 402.
 
 ## Feature Requests
 * on project/repo pages where it says the license, it should link to the license page. The [FSF recently added RDF data for license permissions to the html versions of their licenses](http://www.fsf.org/blogs/licensing/2009-06-rdf) so we should get that rel="license" in there for the web crawlers.
