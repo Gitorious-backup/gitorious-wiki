@@ -12,7 +12,7 @@ This wiki is intended for the community, feel free to add or edit content. There
 
 * [[Wishlist]] request features or submit bugs
 * [[Todo]] a random collection of things close on the horizon
-* [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu
+* [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu and now Gentoo.
 * [[Upgrading]]
 * [[CodingStyleGuide]]
 * [[GitAuthentication]] How Gitorious authenticates `git push`es
