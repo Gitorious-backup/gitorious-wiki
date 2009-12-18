@@ -67,7 +67,7 @@ www-apps/gitorious mysql
 
 </pre>
 
-Now install Fitorious.
+Now install Gitorious.
 
 <pre>
 
