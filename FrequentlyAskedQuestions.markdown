@@ -1,4 +1,4 @@
-# Frequently asked questions for your own Gitorious installation
+This is a collection of issues you may run into when deploying Gitorious on your own server.
 
 ## Login isn't working
 
