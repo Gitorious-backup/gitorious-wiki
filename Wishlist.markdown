@@ -45,7 +45,7 @@ Please feel free to add bugs and/or feature requests below.
 * Stick links to my projects and repos on the homepage - 90% of the time I come to Gitorious to see the projects I'm involved with, not to browse the most popular or recently-pushed-to projects
 * Projects should have the option to set a project image
 * Site admin should have access to all project properties not only via database backend, but also via gitorious frontend - this could be accomplished with an impersonate user option, realized like e.g. in bugzilla.
-* API
+* API (perhaps compatibility with/similarity to [GitHub API](http://develop.github.com/) (link to version 2))
 * I am getting swamped by merge request-emails of a project I'm just partly involved with and therefor it would be nice to have a per-group option to receive emails from clone/merge-requests.
 * Cloned projects should do a nightly fetch-pack.  Imagine me creating a clone on the site, I download it and weeks later want to merge with upstream. I need to download the diffs from the original project. Thats fine. Then I merge locally and to my surprise I need to upload all those objects again (slow!).  What about a nightly fetch pack so the server already has those objects.
 * Code editing in gitorious source view would be a cool feature for small (typo) fixes.
