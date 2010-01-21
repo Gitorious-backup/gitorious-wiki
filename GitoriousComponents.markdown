@@ -65,6 +65,11 @@ When cloning over HTTP, all requests are handled before the request reaches the 
 
 To get this working, you'll need the [mod_xsendfile Apache module](http://tn123.ath.cx/mod_xsendfile/) installed and configured.
 
+Git repository archives (.tgz etc)
+------------
+
+Just like for HTTP cloning, downloading archives requires mod_xsendfile to be installed and configured correctly.
+
 The sphinx daemon
 -----------------
 
