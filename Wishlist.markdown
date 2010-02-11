@@ -15,7 +15,7 @@ Please feel free to add bugs and/or feature requests below.
 * On an 800x480 screen resolution (i.e. an Eee), the login form is completely pushed off the right side of the page - and is still hidden when scrolling to the right (I have to visit /sessions manually to be able to log in when I'm using my Eee)
 * Branches with the '+' character don't show up in the web interface.
 * Branches with the '=' character don't show up in the dropdown when putting in a merge request
-* Merge request numbering got messed up around end of nov 2009. E.g. http://qt.gitorious.org/qt/qt/merge_requests/402 shows "2374" as the MR number in the top navigation bar, and indeed previous merge requests had a higher number, somehow it went back to small numbers again. I guess this one -should- have been 2374, not 402.
+* Merge request numbering got messed up around end of nov 2009. E.g. http://qt.gitorious.org/qt/qt/merge_requests/402 shows "2374" as the MR number in the top navigation bar, and indeed previous merge requests had a higher number, somehow it went back to small numbers again. I guess this one -should- have been 2374, not 402. [DONE]
 * When gitorious is deployed locally, under non-standard port (example: http://git.example.com:3000/) clicking on "Your Dashboard" link removes the reference to the port (Example: it becomes "http://git.example.com/") and user ends up on a "page not available" page. The issue becomes worse (more confusing for users) when gitorious is hosted from behind a reverse proxy (for example from behind NGINX's reverse proxy) where :80 is actually a site-wide home page or is some other intranet application (SugarCRM in our case). There is a bypass for the issue. Instead of clicking on "Your Dashboard" user must click on Gitorious banner, which takes the user to the same place as the "Your Dashboard" would, but preserves the port as part of the url. (Added Jan 23, 2010)
 
 ## Feature Requests
@@ -30,7 +30,7 @@ Please feel free to add bugs and/or feature requests below.
 * i18n/l10n [DONE]
 * improve the CentOS and Ubuntu init scripts file
 * create unattended CentOS and Ubuntu scripts to make installation even easier
-* Watcher's List/Favorite projects
+* Watcher's List/Favorite projects [DONE]
 * Feature to Delete (actually Hide) a repository
 * async task to compile lists/rss
     * newest projects
@@ -47,7 +47,7 @@ Please feel free to add bugs and/or feature requests below.
 * Projects should have the option to set a project image
 * Site admin should have access to all project properties not only via database backend, but also via gitorious frontend - this could be accomplished with an impersonate user option, realized like e.g. in bugzilla.
 * API (perhaps compatibility with/similarity to [GitHub API](http://develop.github.com/) (link to version 2))
-* I am getting swamped by merge request-emails of a project I'm just partly involved with and therefor it would be nice to have a per-group option to receive emails from clone/merge-requests.
+* I am getting swamped by merge request-emails of a project I'm just partly involved with and therefor it would be nice to have a per-group option to receive emails from clone/merge-requests. [DONE]
 * Cloned projects should do a nightly fetch-pack.  Imagine me creating a clone on the site, I download it and weeks later want to merge with upstream. I need to download the diffs from the original project. Thats fine. Then I merge locally and to my surprise I need to upload all those objects again (slow!).  What about a nightly fetch pack so the server already has those objects.
 * Code editing in gitorious source view would be a cool feature for small (typo) fixes.
 * Gitorious' MQ system should support rabbitmq. RabbitMQ's stomp plugin works ok with its bundled test cases, and I don't see any obvious error or reason why it wouldn't work
