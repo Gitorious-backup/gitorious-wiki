@@ -109,6 +109,12 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
 * Create a Admin User as User 'git':
        env RAILS_ENV=production ruby1.8 script/create_admin
 
+# Console User Administration
+* Delete a User
+       env RAILS_ENV=production ruby1.8 script/console
+       > user = User.find_by_login "Username"
+       > user.destroy
+
 # Files
 /etc/apache2/sites-available/gitorious
 > &lt;VirtualHost *:80&gt;  
