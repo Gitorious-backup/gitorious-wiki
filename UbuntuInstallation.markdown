@@ -12,7 +12,7 @@ The following steps should take you from a freshly installed copy of Ubuntu Serv
 
 # Install Ruby gems
     gem install -b --no-ri --no-rdoc rmagick chronic geoip daemons hoe echoe ruby-yadis ruby-openid \
-        mime-types diff-lcs json rack ruby-hmac rake stompserver passenger
+        mime-types diff-lcs json rack ruby-hmac rake stompserver passenger rails
     gem install -b --no-ri --no-rdoc -v 1.3.1.1 rdiscount
     gem install -b --no-ri --no-rdoc -v 1.1 stomp
 
@@ -105,6 +105,9 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
 
 # Finish
 As root, `/etc/init.d/apache2 restart`
+
+Create a Admin User as User 'git':
+env RAILS_ENV=production ruby1.8 script/create_admin
 
 # Files
 /etc/apache2/sites-available/gitorious
