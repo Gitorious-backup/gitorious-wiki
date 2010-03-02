@@ -104,9 +104,9 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
             * * * * * cd /var/www/gitorious && /usr/bin/rake ultrasphinx:index RAILS_ENV=production
 
 # Finish
-As root, `/etc/init.d/apache2 restart`
+* As root, `/etc/init.d/apache2 restart`
 
-Create a Admin User as User 'git':
+* Create a Admin User as User 'git':
        env RAILS_ENV=production ruby1.8 script/create_admin
 
 # Files
