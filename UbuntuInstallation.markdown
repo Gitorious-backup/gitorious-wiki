@@ -107,7 +107,7 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
 As root, `/etc/init.d/apache2 restart`
 
 Create a Admin User as User 'git':
-env RAILS_ENV=production ruby1.8 script/create_admin
+       env RAILS_ENV=production ruby1.8 script/create_admin
 
 # Files
 /etc/apache2/sites-available/gitorious
