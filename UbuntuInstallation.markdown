@@ -1,6 +1,6 @@
 Note: I can confirm that this documentation works with Ubuntu Server 9.10, another documentation can be found here: [Setting up gitorious on your own server](http://cjohansen.no/en/ruby/setting_up_gitorious_on_your_own_server)
 
-The following steps should take you from a freshly installed copy of Ubuntu Server 9.04 to a fully functioning Gitorious server.
+The following steps should take you from a freshly installed copy of Ubuntu Server 9.10 to a fully functioning Gitorious server.
 
 # Install packages
     aptitude update  
@@ -46,8 +46,8 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
 * Install Passenger
         /var/lib/gems/1.8/bin/passenger-install-apache2-module 
 * Create /etc/apache2/mods-available/passenger.load:
-        LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.5/ext/apache2/mod_passenger.so
-        PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.5
+        LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-2.2.10/ext/apache2/mod_passenger.so
+        PassengerRoot /var/lib/gems/1.8/gems/passenger-2.2.10
         PassengerRuby /usr/bin/ruby1.8
 * Enable needed modules
         a2enmod passenger  
