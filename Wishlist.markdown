@@ -1,6 +1,7 @@
 Please feel free to add bugs and/or feature requests below.
 
 ## Bugs
+* diff display sometimes hilights wrong parts of lines (or no parts at all) when tab is changed to spaces in the middle of lines. See changes to track_info.h here: http://gitorious.org/jasonwoof/cmus/commit/ef82f70f073e537e3677ad0d79d50acb4c667d87
 * Edit team page lacks button to "Delete current team image" (the edit person page has this) [DONE]
 * tarballs should contain one directory (preferably matching the basename of the tarball) with all the files in it
 * display the year of commits [[merged](http://gitorious.org/gitorious/mainline/commit/30f136bb75230b2d607bbe64581e60624a5e9269)] [DONE!]
