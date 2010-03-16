@@ -31,6 +31,7 @@ Please feel free to add bugs and/or feature requests below.
 * i18n/l10n [DONE]
 * improve the CentOS and Ubuntu init scripts file
 * create unattended CentOS and Ubuntu scripts to make installation even easier
+   * maybe deprec or capistrano is the way to go here? deprec atleast have alot of pre-made receipts for deploying rails apps
 * Watcher's List/Favorite projects [DONE]
 * Feature to Delete (actually Hide) a repository
 * async task to compile lists/rss
