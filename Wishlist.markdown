@@ -53,3 +53,4 @@ Please feel free to add bugs and/or feature requests below.
 * Code editing in gitorious source view would be a cool feature for small (typo) fixes.
 * Gitorious' MQ system should support rabbitmq. RabbitMQ's stomp plugin works ok with its bundled test cases, and I don't see any obvious error or reason why it wouldn't work
 * If a more comprehensive API is not possible, at least allow Merge Request status changes via signed e-mail from reviewers approved for a repository.
+* It would be nice to get the git-http-backend implemented into gitorious, so all repos added to it could be fetched, pulled, pushed, etc over the http or https protocol.
