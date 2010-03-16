@@ -52,3 +52,4 @@ Please feel free to add bugs and/or feature requests below.
 * Cloned projects should do a nightly fetch-pack.  Imagine me creating a clone on the site, I download it and weeks later want to merge with upstream. I need to download the diffs from the original project. Thats fine. Then I merge locally and to my surprise I need to upload all those objects again (slow!).  What about a nightly fetch pack so the server already has those objects.
 * Code editing in gitorious source view would be a cool feature for small (typo) fixes.
 * Gitorious' MQ system should support rabbitmq. RabbitMQ's stomp plugin works ok with its bundled test cases, and I don't see any obvious error or reason why it wouldn't work
+* If a more comprehensive API is not possible, at least allow Merge Request status changes via signed e-mail from reviewers approved for a repository.
