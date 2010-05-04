@@ -20,7 +20,7 @@ Please feel free to add bugs and/or feature requests below.
 * When gitorious is deployed locally, under non-standard port (example: http://git.example.com:3000/) clicking on "Your Dashboard" link removes the reference to the port (Example: it becomes "http://git.example.com/") and user ends up on a "page not available" page. The issue becomes worse (more confusing for users) when gitorious is hosted from behind a reverse proxy (for example from behind NGINX's reverse proxy) where :80 is actually a site-wide home page or is some other intranet application (SugarCRM in our case). There is a bypass for the issue. Instead of clicking on "Your Dashboard" user must click on Gitorious banner, which takes the user to the same place as the "Your Dashboard" would, but preserves the port as part of the url. (Added Jan 23, 2010)
 
 ## Feature Requests
-* ability to have mix of public and private projects
+* ability to have a mix of public and private projects
 * on project/repo pages where it says the license, it should link to the license page. The [FSF recently added RDF data for license permissions to the html versions of their licenses](http://www.fsf.org/blogs/licensing/2009-06-rdf) so we should get that rel="license" in there for the web crawlers.
 * commits on main project page and main repo page (eg [here](http://gitorious.org/wfpl) and [here](http://gitorious.org/wfpl/wfpl)) should recognize e-mail aliases of committers (as set under "manage aliases"). Specifically, these should link their name to their gitorious account and show the [gr]avitar from the primary e-mail
 * make diff's "side-by-side" mode show changed lines with one table row. eg [here](http://gitorious.org/wfpl/wfpl/commit/532d75b922c5e4e2e39172b6fe3c4b2153ffc28d?diffmode=sidebyside).
