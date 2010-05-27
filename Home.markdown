@@ -10,6 +10,7 @@ This wiki is intended for the community, feel free to add or edit content. There
 
 ## Documentation
 
+* [[FAQ]] frequently asked questions
 * [[Wishlist]] request features or submit bugs
 * [[Todo]] a random collection of things close on the horizon
 * [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu and now Gentoo.
