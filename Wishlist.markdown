@@ -56,3 +56,4 @@ Please feel free to add bugs and/or feature requests below.
 * Gitorious' MQ system should support rabbitmq. RabbitMQ's stomp plugin works ok with its bundled test cases, and I don't see any obvious error or reason why it wouldn't work
 * If a more comprehensive API is not possible, at least allow Merge Request status changes via signed e-mail from reviewers approved for a repository.
 * It would be nice to get the git-http-backend implemented into gitorious, so all repos added to it could be fetched, pulled, pushed, etc over the http or https protocol.
+* README "à la github" where you can create a README.md in a wiki markup and used as a source for the webpage at gitorious. That would allow users from github to share more easily with gitorious.org. http://github.com/guides/readme-formatting
