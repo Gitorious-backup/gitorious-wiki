@@ -114,6 +114,10 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
        env RAILS_ENV=production ruby1.8 script/console
        > user = User.find_by_login "Username"
        > user.destroy
+* Create Roles
+        env RAILS_ENV=production ruby1.8 script/console
+        > Role.create!(:name => "Member", :kind => Role::KIND_MEMBER)
+        > Role.create!(:name => "Administrator", :kind => Role::KIND_ADMIN) 
 
 # Files
 /etc/apache2/sites-available/gitorious
