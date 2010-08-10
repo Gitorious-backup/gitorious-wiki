@@ -1,4 +1,4 @@
-# Web hooks in Gitorious #
+# Web hooks in Gitorious 
 
 Note: This page is currently intended for local Gitorious installations, since this feature is not offered as part of Gitorious.org yet.
 
@@ -6,18 +6,20 @@ Gitorious requires several [Git hooks](http://www.kernel.org/pub/software/scm/gi
 
 Many users, however, have asked how to integrate Gitorious with bug trackers, microblog updates etc, and the web hooks feature in Gitorious could be a solution for this.
 
+Note that you need to set up a web server that receives and handles this information; since the data is in JSON format, most languages and programming environments should make this quite easy.
+
+
 The overall functionality is as follows:
+
 * each repository can have one or several web hooks set up
 * whenever a commit is pushed to Gitorious, Gitorious will attempt to connect to the URL associated with the web hooks - if any 
 * Gitorious will send a HTTP payload in JSON format, containing a summary of who pushed
 
-Note that you need to set up a web server that receives and handles this information; since the data is in JSON format, most languages and programming environments should make this quite easy.
-
-## An example of the payload ##
+## An example of the payload
 
 Whenever a user pushes one or several commits to Gitorious, one JSON request will be made. This is a HTTP POST request with a single parameter: `payload` containing the JSON data about the push. This is an example of such a payload for a fictional repository:
 
-<pre><code>
+<code>
 {
   "after": "34f5a766e48bd270037350961d79fa59f9b746d7", 
   "before": "d46f9c3ee6d4eca4e8248f4cabf782e1f1e79fa9", 
@@ -62,13 +64,16 @@ Whenever a user pushes one or several commits to Gitorious, one JSON request wil
     "url": "http:\/\/gitorious.here\/web-hooks\/web-hooks"
   }
 }
-</code></pre>
+</code>
  
-## Testing web hooks ##
+##Testing web hooks
+
 
 To see the actual data sent from your Gitorious server, [Postbin](http://postbin.org/) provides a free and easy solution, simply go to their site and click "Make a Postbin". You will immediately be given a URL you can push data to, and all data is displayed by visiting this URL in your browser. 
 
-## Enabling web hooks for your local Gitorious installation ##
+
+## Enabling web hooks for your local Gitorious installation
+
 
 Since this feature needs some testing and feedback, Gitorious does not currently offer a UI for adding/maintaining web hooks. Adding one is done from the console, like this:
 
