@@ -77,11 +77,11 @@ To see the actual data sent from your Gitorious server, [Postbin](http://postbin
 
 Since this feature needs some testing and feedback, Gitorious does not currently offer a UI for adding/maintaining web hooks. Adding one is done from the console, like this:
 
-  project = Project.find_by_slug "gitorious"
-  repository = project.repositories.find_by_name "mainline"
-  hook = repository.hooks.build
-  hook.user = repository.user
-  hook.url = "http://www.postbin.org/wqpx3l"
-  hook.save
+    project = Project.find_by_slug "gitorious"
+    repository = project.repositories.find_by_name "mainline"
+    hook = repository.hooks.build
+    hook.user = repository.user
+    hook.url = "http://www.postbin.org/wqpx3l"
+    hook.save
 
 Whenever you push some commits to this repository, a request will be made to the server you specified. The Hook object in the database keeps track of the number of successful and failed requests, but URLs that continue to fail will not be deactivated.
