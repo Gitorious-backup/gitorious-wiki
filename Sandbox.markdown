@@ -34,6 +34,8 @@ in order:
 * [[Blah-Baz]]
 * [[FooBarBaz]]
 * BazBarFoo
+* [[Foo Bar]]
+* [[FooBar]]
 
 And now some `CamelCase InlineCode`.
 
