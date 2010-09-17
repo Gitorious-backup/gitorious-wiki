@@ -4,15 +4,19 @@ The following steps should take you from a freshly installed copy of Ubuntu Serv
 
 # Install packages
     aptitude update  
-    aptitude install build-essential zlib1g-dev tcl-dev libexpat-dev libcurl4-openssl-dev postfix apache2 \
-        mysql-server mysql-client  apg geoip-bin libgeoip1 libgeoip-dev sqlite3 libsqlite3-dev imagemagick \
-        libpcre3 libpcre3-dev zlib1g zlib1g-dev libyaml-dev libmysqlclient15-dev apache2-dev libonig-dev \
-        ruby-dev rubygems  libopenssl-ruby phpmyadmin libdbd-mysql-ruby libmysql-ruby  libmagick++-dev \
-        zip unzip memcached git-core git-svn git-doc git-cvs irb
+    aptitude install build-essential zlib1g-dev tcl-dev libexpat-dev \
+        libcurl4-openssl-dev postfix apache2 mysql-server mysql-client \
+        apg geoip-bin libgeoip1 libgeoip-dev sqlite3 libsqlite3-dev \
+        imagemagick libpcre3 libpcre3-dev zlib1g zlib1g-dev libyaml-dev \
+        libmysqlclient15-dev apache2-dev libonig-dev ruby-dev rubygems \
+        libopenssl-ruby phpmyadmin libdbd-mysql-ruby libmysql-ruby \
+        libmagick++-dev  zip unzip memcached git-core git-svn git-doc \
+        git-cvs irb
 
 # Install Ruby gems
-    gem install -b --no-ri --no-rdoc rmagick chronic geoip daemons hoe echoe ruby-yadis ruby-openid \
-        mime-types diff-lcs json rack ruby-hmac rake stompserver passenger rails
+    gem install -b --no-ri --no-rdoc rmagick chronic geoip daemons hoe \
+        echoe ruby-yadis ruby-openid mime-types diff-lcs json rack \
+        ruby-hmac rake stompserver passenger rails
     gem install -b --no-ri --no-rdoc -v 1.3.1.1 rdiscount
     gem install -b --no-ri --no-rdoc -v 1.1 stomp
 
