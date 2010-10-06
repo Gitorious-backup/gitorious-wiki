@@ -124,77 +124,78 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
         > Role.create!(:name => "Administrator", :kind => Role::KIND_ADMIN) 
 
 # Files
+
 /etc/apache2/sites-available/gitorious
-> &lt;VirtualHost *:80&gt;  
->   ServerName your.server.com  
->   DocumentRoot /var/www/gitorious/public  
-> &lt;/VirtualHost&gt;
+    <VirtualHost *:80>
+    ServerName your.server.com  
+    DocumentRoot /var/www/gitorious/public  
+    </VirtualHost>
 
 /etc/apache2/sites-available/gitorious-ssl
-> &lt;IfModule mod_ssl.c&gt;  
->   &lt;VirtualHost \_default\_:443&gt;  
->    DocumentRoot /var/www/gitorious/public  
->    SSLEngine on  
->    SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem  
->    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key  
->    BrowserMatch \"\.\*MSIE\.\*\" nokeepalive ssl-unclean-shutdown downgrade-1.0 force-response-1.0  
->   &lt;/VirtualHost&gt;  
-> &lt;/IfModule&gt;
+    <IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+    DocumentRoot /var/www/gitorious/public  
+    SSLEngine on  
+    SSLCertificateFile    /etc/ssl/certs/ssl-cert-snakeoil.pem  
+    SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key  
+    BrowserMatch ".*MSIE.*" nokeepalive ssl-unclean-shutdown downgrade-1.0 force-response-1.0  
+    </VirtualHost>
+    </IfModule>
 
 /etc/init.d/stomp
-> \#!/bin/sh  
-> \# Start/stop the stompserver  
-> \#  
-> \### BEGIN INIT INFO  
-> \# Provides:          stomp  
-> \# Required-Start:    $local_fs $remote_fs $network $syslog   
-> \# Required-Stop:        
-> \# Default-Start:     2 3 4 5  
-> \# Default-Stop:      1  
-> \# Short-Description: Stomp  
-> \# Description:       Stomp  
-> \### END INIT INFO  
->   
->   
-> test -f /usr/bin/stompserver || exit 0  
->   
-> . /lib/lsb/init-functions  
->   
-> case "$1" in  
-> start)  log_daemon_msg "Starting stompserver" "stompserver"  
->          start-stop-daemon --start --name stompserver --startas /usr/bin/stompserver --background --user git  
->          log_end_msg $?  
->         ;;  
-> stop)  log_daemon_msg "Stopping stompserver" "stompserver"  
->          start-stop-daemon --stop --name stompserver  
->          log_end_msg $?  
->          ;;  
-> restart) log_daemon_msg "Restarting stompserver" "stompserver"  
->         start-stop-daemon --stop --retry 5 --name stompserver  
->         start-stop-daemon --start --name stompserver --startas /usr/bin/stompserver --background --user git  
->         log_end_msg $?  
->         ;;  
-> status)  
->         status_of_proc /usr/bin/stompserver stompserver && exit 0 || exit $?  
->         ;;  
-> *)      log_action_msg "Usage: /etc/init.d/stomp {start|stop|restart|status}"  
->         exit 2  
->         ;;  
-> esac  
-> exit 0  
+    #!/bin/sh  
+    # Start/stop the stompserver  
+    #  
+    ### BEGIN INIT INFO  
+    # Provides:          stomp  
+    # Required-Start:    $local_fs $remote_fs $network $syslog   
+    # Required-Stop:        
+    # Default-Start:     2 3 4 5  
+    # Default-Stop:      1  
+    # Short-Description: Stomp  
+    # Description:       Stomp  
+    ### END INIT INFO  
+    
+    
+    test -f /usr/bin/stompserver || exit 0  
+    
+    . /lib/lsb/init-functions  
+    
+    case "$1" in  
+    start)  log_daemon_msg "Starting stompserver" "stompserver"  
+        start-stop-daemon --start --name stompserver --startas /usr/bin/stompserver --background --user git  
+        log_end_msg $?  
+        ;;  
+    stop)  log_daemon_msg "Stopping stompserver" "stompserver"  
+        start-stop-daemon --stop --name stompserver  
+        log_end_msg $?  
+        ;;  
+    restart) log_daemon_msg "Restarting stompserver" "stompserver"  
+        start-stop-daemon --stop --retry 5 --name stompserver  
+        start-stop-daemon --start --name stompserver --startas /usr/bin/stompserver --background --user git  
+        log_end_msg $?  
+        ;;  
+    status)  
+        status_of_proc /usr/bin/stompserver stompserver && exit 0 || exit $?  
+        ;;  
+    *)      log_action_msg "Usage: /etc/init.d/stomp {start|stop|restart|status}"  
+        exit 2  
+        ;;  
+    esac  
+    exit 0  
 
 /etc/init.d/git-poller
-> \#!/bin/sh  
-> \# Start/stop the git poller  
-> \#  
-> \### BEGIN INIT INFO  
-> \# Provides:          git-poller  
-> \# Required-Start:    stomp  
-> \# Required-Stop:  
-> \# Default-Start:     2 3 4 5  
-> \# Default-Stop:      1  
-> \# Short-Description: Gitorious poller  
-> \# Description:       Gitorious poller  
-> \### END INIT INFO  
->   
-> /bin/su - git -c "cd /var/www/gitorious;RAILS_ENV=production script/poller $@"  
+    #!/bin/sh  
+    # Start/stop the git poller  
+    #  
+    ### BEGIN INIT INFO  
+    # Provides:          git-poller  
+    # Required-Start:    stomp  
+    # Required-Stop:  
+    # Default-Start:     2 3 4 5  
+    # Default-Stop:      1  
+    # Short-Description: Gitorious poller  
+    # Description:       Gitorious poller  
+    ### END INIT INFO  
+     
+    /bin/su - git -c "cd /var/www/gitorious;RAILS_ENV=production script/poller $@"  
