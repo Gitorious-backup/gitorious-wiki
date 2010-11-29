@@ -32,6 +32,7 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
 -- or --  
     git clone http://git.gitorious.org/gitorious/mainline.git /var/www/gitorious
 
+# Put gitorious binary on path
     ln -s /var/www/gitorious/script/gitorious /usr/bin
 
 # Configure services
