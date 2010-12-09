@@ -62,3 +62,4 @@ Please feel free to add bugs and/or feature requests below.
 * If a more comprehensive API is not possible, at least allow Merge Request status changes via signed e-mail from reviewers approved for a repository.
 * It would be nice to get the git-http-backend implemented into gitorious, so all repos added to it could be fetched, pulled, pushed, etc over the http or https protocol.
 * README "à la github" where you can create a README.md in a wiki markup and used as a source for the webpage at gitorious. That would allow users from github to share more easily with gitorious.org. http://github.com/guides/readme-formatting
+* add headers to watch notification emails, in order to make it easier to filter notification to mailbxoes according to project, committer, etc. pretty much like bugzilla does in its notification
