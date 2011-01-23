@@ -21,6 +21,7 @@ Please feel free to add bugs and/or feature requests below.
 * Gitorious doesn't work on PostgreSQL, see [this bug report](http://gitorious.lighthouseapp.com/projects/53751/tickets/2-group-by-query-error-on-postgresql).
 * if you have a git project with no master branch, or name your master something else, then go to view the project source tree the browser gets stuck in an endless loop:  "The webpage at http://gitorious.org/ubuntuone/hacking/trees/HEAD has resulted in too many redirects. Clearing your cookies for this site or allowing third-party cookies may fix the problem. If not, it is possibly a server configuration issue and not a problem with your computer."
 * If you watch a project which is then deleted, anywhere on the website where it would attempt to display information regarding said project would only display the standard error page. 
+* forgot_password.html.erb doesn't show flash[:error], thus it is impossible to see error message while, e.g., typing wrong email to send password to.
 
 ## Feature Requests
 * Search commits, like cgit
