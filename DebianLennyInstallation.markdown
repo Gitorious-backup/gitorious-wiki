@@ -110,6 +110,8 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
     sudo update-rc.d git-daemon defaults
     sudo update-rc.d git-ultrasphinx defaults
     sudo update-rc.d git-poller defaults
+* Link the gitorious script into `/usr/local/bin`
+    sudo ln -s /var/www/gitorious/script/gitorious /usr/local/bin/
 
 # Configure Apache
 * Install Passenger
@@ -170,10 +172,6 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
     crontab -e
         PATH=/usr/local/sphinx/bin:/usr/bin:/bin
         * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/rake ultrasphinx:index RAILS_ENV=production
-
-* Add the following to `~git/.bashrc`
-    PATH="/var/www/gitorious/script:$PATH"
-    export PATH
 
 # Finish
     sudo /etc/init.d/apache2 restart
