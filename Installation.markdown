@@ -9,3 +9,5 @@ If you want a automated installation script for gitorious in ubuntu you can try 
 [[Gentoo_Installation]] - The portage way.
 
 [[Rhel_Installation]] - Installation guide for RHEL 5 by some kickass team called Verso.
+
+[[DebianLennyInstallation]] - Step by step instructions for install Gitorious under Debian Lenny 5.0.8
