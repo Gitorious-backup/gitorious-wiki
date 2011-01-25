@@ -144,29 +144,24 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 
 # Configure Gitorious
 * Run the following
-
     sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git  
-    sudo chown -R git:git /var/www/gitorious  
-        
+    sudo chown -R git:git /var/www/gitorious          
     sudo su - git  
     mkdir .ssh  
     touch .ssh/authorized_keys  
-    chmod 700 .ssh  
-    chmod 600 .ssh/authorized_keys  
-    mkdir tmp/pids  
-    mkdir repositories  
-    mkdir tarballs  
-        
+    chmod -R go-rwx .ssh  
+    mkdir tmp/pids repositories tarballs  tarballs-work
     cp config/database.sample.yml config/database.yml  
     cp config/gitorious.sample.yml config/gitorious.yml  
-    cp config/broker.yml.example config/broker.yml  
+    cp config/broker.yml.example config/broker.yml
+
 * Edit `config/database.yml`: Remove every section but production
 * Edit `config/gitorious.yml`:  Remove every section but production
   * `repository_base_path` should be something like `/var/www/gitorious/repositories`
   * `gitorious_client_port` should be 80
   * `gitorious_host` needs to be the exact hostname that clients will use (cookies get messed up otherwise)
   * `archive_cache_dir` should be something like `/var/www/gitorious/tarballs`
-  * `archive_work_dir` should be something like `/tmp/tarballs-work`
+  * `archive_work_dir` should be something like `/var/www/gitorious/tarballs-work`
   * `hide_http_clone_urls` should be `true` (they require extra unknown setup to work)
   * `is_gitorious_dot_org` should be `false`
 * Run the following
