@@ -113,7 +113,15 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 * Link the gitorious script into `/usr/local/bin`
     sudo ln -s /var/www/gitorious/script/gitorious /usr/local/bin/
 
-# Configure Apache
+# Install mod_xsendfile Apache2 module
+* Compile and install
+    wget 'https://tn123.org/mod_xsendfile/mod_xsendfile.c#hash(sha256:8e8c21ef39bbe86464d3831fd30cc4c51633f6e2e002204509e55fc7c8df9cf9)'
+    sudo apxs2 -ci mod_xsendfile.c
+* Edit `/etc/apache2/mods-available/xsendfile.load`:
+    LoadModule xsendfile_module /usr/lib/apache2/modules/mod_xsendfile.so
+    a2enmod xsendfile
+
+# Configure Apache2
 * Install Passenger
     sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
 * Create `/etc/apache2/mods-available/passenger.load`:
@@ -211,6 +219,12 @@ The gitorious documentation recommends locking down the source tree:
 
             CustomLog /var/log/apache2/gitorious-access.log combined
 
+            <IfModule mod_xsendfile.c>
+                    XSendFile on
+                    XSendFilePath /var/www/gitorious/tarballs
+            </IfModule>
+
+
     </VirtualHost>
 
 
@@ -237,6 +251,12 @@ The gitorious documentation recommends locking down the source tree:
         BrowserMatch ".*MSIE.*" \
                 nokeepalive ssl-unclean-shutdown \
                 downgrade-1.0 force-response-1.0
+
+        <IfModule mod_xsendfile.c>
+                XSendFile on
+                XSendFilePath /var/www/gitorious/tarballs
+        </IfModule>
+
 
     </VirtualHost>
     </IfModule>
