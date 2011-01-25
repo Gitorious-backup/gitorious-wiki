@@ -127,7 +127,7 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 * Add a git user to MySQL:
     mysql -u root -p
         create database gitorious_production;
-        grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'gitty';
+        grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'YOUR_PASSWORD';
 * Create /etc/apache2/sites-available/gitorious (see Files below)
 * Create /etc/apache2/sites-available/gitorious-ssl (see Files below)
 * Disable the default sites and enable the Gitorious sites
