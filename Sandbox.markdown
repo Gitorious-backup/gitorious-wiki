@@ -51,3 +51,5 @@ An image: ![Image](http://gitorious.org/images/logo-cube-text.png)
 1. milk
 
 This edit is done locally and pushed over Git
+
+This is so cool you won't believe it
