@@ -50,9 +50,9 @@ I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combinatio
     sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin 
 
 # Install Ruby gems
-    export PATH=/usr/local/ImageMagaick/bin:$PATH    # for rmagick
-    sudo gem install -b --no-ri --no-rdoc rmagick chronic geoip daemons hoe \
-        echoe ruby-yadis ruby-openid mime-types diff-lcs json ruby-hmac \
+    sudo gem install -b --no-ri --no-rdoc chronic geoip daemons hoe \
+        echoe ruby-yadis ruby-openid mime-types diff-lcs json ruby-hmac
+    sudo PATH=/usr/local/ImageMagick/bin:$PATH gem install -b --no-ri --no-rdoc rmagick
     sudo gem install -b --no-ri --no-rdoc -v 1.0.1 rack
     sudo gem install -b --no-ri --no-rdoc -v 1.3.1.1 rdiscount
     sudo gem install -b --no-ri --no-rdoc -v 1.1 stomp
