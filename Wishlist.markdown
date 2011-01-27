@@ -22,6 +22,7 @@ Please feel free to add bugs and/or feature requests below.
 * if you have a git project with no master branch, or name your master something else, then go to view the project source tree the browser gets stuck in an endless loop:  "The webpage at http://gitorious.org/ubuntuone/hacking/trees/HEAD has resulted in too many redirects. Clearing your cookies for this site or allowing third-party cookies may fix the problem. If not, it is possibly a server configuration issue and not a problem with your computer."
 * If you watch a project which is then deleted, anywhere on the website where it would attempt to display information regarding said project would only display the standard error page. 
 * forgot_password.html.erb doesn't show flash[:error], thus it is impossible to see error message while, e.g., typing wrong email to send password to.
+* After using the link "Show my activities" in the user's dashboard, the link "Show my newsfeed" will not display the user's watchlist anymore. Instead you have to choose "Go to my dashboard".
 
 ## Feature Requests
 * Search commits, like cgit
