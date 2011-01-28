@@ -23,6 +23,9 @@ Please feel free to add bugs and/or feature requests below.
 * If you watch a project which is then deleted, anywhere on the website where it would attempt to display information regarding said project would only display the standard error page. 
 * forgot_password.html.erb doesn't show flash[:error], thus it is impossible to see error message while, e.g., typing wrong email to send password to.
 * After using the link "Show my activities" in the user's dashboard, the link "Show my newsfeed" will not display the user's watchlist anymore. Instead you have to choose "Go to my dashboard".
+* [Merge requests: Send an email to defined address(es)](http://gitorious.lighthouseapp.com/projects/53751/tickets/9-merge-requests-send-an-email-to-defined-addresses#ticket-9-1)
+* [Cannot delete a repository](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets/10-cannot-delete-a-repository)
+
 
 ## Feature Requests
 * Search commits, like cgit
@@ -67,3 +70,10 @@ Please feel free to add bugs and/or feature requests below.
 * README "à la github" where you can create a README.md in a wiki markup and used as a source for the webpage at gitorious. That would allow users from github to share more easily with gitorious.org. http://github.com/guides/readme-formatting
 * add headers to watch notification emails, in order to make it easier to filter notification to mailbxoes according to project, committer, etc. pretty much like bugzilla does in its notification
 * add graph page for project/repository statistics
+
+
+## Discussion
+Does it make sense having two places where bugs/features can be reported/requested:
+* http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets
+* and here?
+* Which is the main place for bug reports/feature request?
