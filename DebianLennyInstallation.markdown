@@ -28,7 +28,7 @@ Install sqlite and dev files (3.7.3 at time of writing):
     sudo aptitude -t lenny-backports install sqlite3 libsqlite3-dev
 
 # Install ImageMagick
-The version in Lenny 5.0.8 is too old for the current rmagick gem (currently 2.13.1).  We'll compile from the latest source (currently 6.6.7).
+The version in Lenny 5.0.8 is too old for the current rmagick gem (currently 2.13.1).  We'll compile from the latest source (currently 6.6.7-3).
     wget ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-6.6.7-3.tar.bz2
     tar jxf ImageMagick-6.6.7-3.tar.bz2 && cd ImageMagick-6.6.7-3
     ./configure --prefix=/usr/local/ImageMagick-6.6.7-3
@@ -73,7 +73,7 @@ Download the latest [binaries](http://www.apache.org/dyn/closer.cgi?path=/active
     sudo mv apache-activemq-5.4.2 /usr/local
     cd /usr/local && sudo ln -s apache-activemq-5.4.2 apache-activemq && cd apache-activemq
     sudo bin/activemq setup /etc/default/activemq && sudo chmod 600 /etc/default/activemq
-    sudo adduser --system --no-create-home --shell /bin/bash activemq 
+    sudo adduser --system --no-create-home --home /usr/local/apache-activemq --shell /bin/bash activemq 
     sudo chown -R activemq:nogroup /usr/local/apache-activemq-5.4.2
 
 Edit `/etc/default/activemq` and add to the beginning of the file:
