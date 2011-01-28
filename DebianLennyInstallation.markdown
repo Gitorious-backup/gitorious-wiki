@@ -180,7 +180,7 @@ The gitorious documentation recommends locking down the source tree:
     sudo adduser www-data git
     cd /var/www/gitorious
     chmod -R o-rwx /var/www/gitorious
-    chmod -R u+w config/environment.rb log/ tmp/ tarballs/ repositories/ db/sphinx/
+    chmod -R u+w config/environment.rb log/ tmp/ tarballs/ tarballs-work/ repositories/ db/sphinx/
     
 # Finish
     sudo /etc/init.d/apache2 restart
