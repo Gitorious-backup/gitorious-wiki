@@ -31,9 +31,9 @@ Install sqlite and dev files (3.7.3 at time of writing):
 The version in Lenny 5.0.8 is too old for the current rmagick gem (currently 2.13.1).  We'll compile from the latest source (currently 6.6.7).
     wget ftp://ftp.imagemagick.org/pub/ImageMagick/ImageMagick-6.6.7-3.tar.bz2
     tar jxf ImageMagick-6.6.7-3.tar.bz2 && cd ImageMagick-6.6.7-3
-    ./configure --prefix=/usr/local/ImageMagick-6.6.7.3
+    ./configure --prefix=/usr/local/ImageMagick-6.6.7-3
     make && sudo make install
-    cd /usr/local && sudo ln -s ImageMagick-6.6.7.3 ImageMagick
+    cd /usr/local && sudo ln -s ImageMagick-6.6.7-3 ImageMagick
   
 Create `/etc/ld.so.conf.d/ImageMagick.conf` with the following line:
     /usr/local/ImageMagick/lib
