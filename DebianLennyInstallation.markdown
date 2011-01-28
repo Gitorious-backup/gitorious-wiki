@@ -119,7 +119,6 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
     sudo apxs2 -ci mod_xsendfile.c
 * Edit `/etc/apache2/mods-available/xsendfile.load`:
     LoadModule xsendfile_module /usr/lib/apache2/modules/mod_xsendfile.so
-    a2enmod xsendfile
 
 # Configure Apache2
 * Install Passenger
@@ -129,20 +128,20 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
     PassengerRoot /opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/passenger-3.0.2
     PassengerRuby /opt/ruby-enterprise-1.8.7-2010.02/bin/ruby
 * Enable needed modules
-    sudo a2enmod passenger rewrite ssl
-* Restart Apache
-    sudo /etc/init.d/apache2 restart
-* Add a git user to MySQL:
-    mysql -u root -p
-        create database gitorious_production;
-        grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'YOUR_PASSWORD';
+    sudo a2enmod passenger rewrite ssl xsendfile
 * Create /etc/apache2/sites-available/gitorious (see Files below)
 * Create /etc/apache2/sites-available/gitorious-ssl (see Files below)
 * Disable the default sites and enable the Gitorious sites
     sudo a2dissite default default-ssl
     sudo a2ensite gitorious gitorious-ssl
+* Restart Apache
+    sudo /etc/init.d/apache2 restart
 
 # Configure Gitorious
+* Add a git user to MySQL:
+    mysql -u root -p
+        create database gitorious_production;
+        grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'YOUR_PASSWORD';
 * Run the following
     sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git  
     sudo chown -R git:git /var/www/gitorious          
