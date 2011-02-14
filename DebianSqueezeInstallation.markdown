@@ -14,13 +14,13 @@ The following steps should take you from a freshly installed copy of Debian Sque
 
 # Install Ruby enterprise
 I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combination for other web services on this host. The following is for the latest release (currently 1.8.7-2010.02).  I use the default install location (`/opt`).  Linking gem, rake and ruby into `/usr/local/bin` is optional.  I do find that it prevents having to set PATH in a number of different scripts seperately.  Please update me if there's a better way to do this.
-    wget http://rubyforge.org/frs/download.php/71096/ruby-enterprise-1.8.7-2010.02.tar.gz
-    tar zxf ruby-enterprise-1.8.7-2010.02.tar.gz
-    sudo ruby-enterprise-1.8.7-2010.02/installer
-    cd /opt && sudo ln -s ruby-enterprise-1.8.7-2010.02 ruby-enterprise
+    wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2011.01.tar.gz
+    tar zxf ruby-enterprise-1.8.7-2011.01.tar.gz
+    sudo ruby-enterprise-1.8.7-2011.01/installer
+    cd /opt && sudo ln -s ruby-enterprise-1.8.7-2011.01/ ruby-enterprise
     sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin 
 
-# Install Ruby gems
+# Install Ruby gems (versions verified as of 14 feb 2011)
     sudo gem install -b --no-ri --no-rdoc rubygems-update -v='1.4.2'
     sudo /opt/ruby-enterprise/bin/update_rubygems
     sudo gem install -b --no-ri --no-rdoc chronic geoip daemons hoe \
@@ -28,7 +28,7 @@ I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combinatio
     sudo gem install -b --no-ri --no-rdoc -v 1.0.1 rack
     sudo gem install -b --no-ri --no-rdoc -v 1.3.1.1 rdiscount
     sudo gem install -b --no-ri --no-rdoc -v 1.1 stomp
-    sudo gem uninstall -I i18n    # latest versions conflict with gitorious
+    sudo gem uninstall -I i18n    # latest versions conflict with gitorious login page
 
 # Install Sphinx
 Compile latest version (currently 0.9.9)
@@ -87,9 +87,9 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 * Install Passenger
     sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
 * Create `/etc/apache2/mods-available/passenger.load`:
-    LoadModule passenger_module /opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/passenger-3.0.2/ext/apache2/mod_passenger.so
-    PassengerRoot /opt/ruby-enterprise-1.8.7-2010.02/lib/ruby/gems/1.8/gems/passenger-3.0.2
-    PassengerRuby /opt/ruby-enterprise-1.8.7-2010.02/bin/ruby
+    LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.2/ext/apache2/mod_passenger.so
+    PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.2
+    PassengerRuby /opt/ruby-enterprise/bin/ruby
 * Enable needed modules
     sudo a2enmod passenger rewrite ssl xsendfile
 * Create /etc/apache2/sites-available/gitorious (see Files below)
