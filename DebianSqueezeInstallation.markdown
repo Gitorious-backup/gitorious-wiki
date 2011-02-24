@@ -14,10 +14,10 @@ The following steps should take you from a freshly installed copy of Debian Sque
 
 # Install Ruby enterprise
 I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combination for other web services on this host. The following is for the latest release (currently 1.8.7-2011.01).  I use the default install location (`/opt`).  Linking gem, rake and ruby into `/usr/local/bin` is optional.  I do find that it prevents having to set PATH in a number of different scripts seperately.  Please update me if there's a better way to do this.
-    wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2011.01.tar.gz
-    tar zxf ruby-enterprise-1.8.7-2011.01.tar.gz
-    sudo ruby-enterprise-1.8.7-2011.01/installer
-    cd /opt && sudo ln -s ruby-enterprise-1.8.7-2011.01/ ruby-enterprise
+    wget http://rubyenterpriseedition.googlecode.com/files/ruby-enterprise-1.8.7-2011.03.tar.gz
+    tar zxf ruby-enterprise-1.8.7-2011.03.tar.gz
+    sudo ruby-enterprise-1.8.7-2011.03/installer
+    cd /opt && sudo ln -s ruby-enterprise-1.8.7-2011.03/ ruby-enterprise
     sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin 
 
 # Install Ruby gems (versions verified as of 14 feb 2011)
