@@ -87,8 +87,8 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 * Install Passenger
     sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
 * Create `/etc/apache2/mods-available/passenger.load`:
-    LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.2/ext/apache2/mod_passenger.so
-    PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.2
+    LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.3/ext/apache2/mod_passenger.so
+    PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.3
     PassengerRuby /opt/ruby-enterprise/bin/ruby
 * Enable needed modules
     sudo a2enmod passenger rewrite ssl xsendfile
