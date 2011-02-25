@@ -25,6 +25,7 @@ Please feel free to add bugs and/or feature requests below.
 * After using the link "Show my activities" in the user's dashboard, the link "Show my newsfeed" will not display the user's watchlist anymore. Instead you have to choose "Go to my dashboard".
 * [Merge requests: Send an email to defined address(es)](http://gitorious.lighthouseapp.com/projects/53751/tickets/9-merge-requests-send-an-email-to-defined-addresses#ticket-9-1)
 * [Cannot delete a repository](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets/10-cannot-delete-a-repository)
+* [Viewing some commits throw an error](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets/15-viewing-some-commits-throw-an-error)
 
 
 ## Feature Requests
