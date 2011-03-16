@@ -20,15 +20,9 @@ I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combinatio
     cd /opt && sudo ln -s ruby-enterprise-1.8.7-2011.03/ ruby-enterprise
     sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin 
 
-# Install Ruby gems (versions verified as of 14 feb 2011)
-    sudo gem install -b --no-ri --no-rdoc rubygems-update -v='1.4.2'
-    sudo /opt/ruby-enterprise/bin/update_rubygems
-    sudo gem install -b --no-ri --no-rdoc chronic geoip daemons hoe \
-        echoe ruby-yadis ruby-openid mime-types diff-lcs json ruby-hmac rmagick
-    sudo gem install -b --no-ri --no-rdoc -v 1.0.1 rack
-    sudo gem install -b --no-ri --no-rdoc -v 1.3.1.1 rdiscount
-    sudo gem install -b --no-ri --no-rdoc -v 1.1 stomp
-    sudo gem uninstall -I i18n    # latest versions conflict with gitorious login page
+# Install Ruby gems
+For this, I gave my git user temporary sudo access.  I think you could just execute this as root as well.
+    bundle install
 
 # Install Sphinx
 Compile latest version (currently 0.9.9)
@@ -87,8 +81,8 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 * Install Passenger
     sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
 * Create `/etc/apache2/mods-available/passenger.load`:
-    LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.3/ext/apache2/mod_passenger.so
-    PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.3
+    LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5/ext/apache2/mod_passenger.so
+    PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5
     PassengerRuby /opt/ruby-enterprise/bin/ruby
 * Enable needed modules
     sudo a2enmod passenger rewrite ssl xsendfile
