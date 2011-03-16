@@ -20,10 +20,6 @@ I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combinatio
     cd /opt && sudo ln -s ruby-enterprise-1.8.7-2011.03/ ruby-enterprise
     sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin 
 
-# Install Ruby gems
-For this, I gave my git user temporary sudo access.  I think you could just execute this as root as well.
-    bundle install
-
 # Install Sphinx
 Compile latest version (currently 0.9.9)
     wget http://sphinxsearch.com/files/sphinx-0.9.9.tar.gz
@@ -60,6 +56,10 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
     sudo git clone git://gitorious.org/gitorious/mainline.git /var/www/gitorious  
 -- or --  
     sudo git clone http://git.gitorious.org/gitorious/mainline.git /var/www/gitorious
+
+# Install Ruby gems
+For this, I gave my git user temporary sudo access.  You could just execute this as root as well.
+    cd /var/www/gitorious && bundle install
 
 # Configure services
 * Copy Sphinx and git-daemon scripts from `gitorious/doc/templates/ubuntu` to `/etc/init.d`; change Ruby interpreter in git-daemon if you used a non-default location.  Also, you'll want to change the `Provides` line in these scripts to something without spaces.  I've used `gitorious-git-daemon` and `gitorious-ultrasphinx`.
