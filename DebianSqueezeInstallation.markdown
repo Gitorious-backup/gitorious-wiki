@@ -59,7 +59,7 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 
 # Install Ruby gems
 For this, I gave my git user temporary sudo access.  You could just execute this as root as well.
-    cd /var/www/gitorious && bundle install
+    cd /var/www/gitorious &&  /opt/ruby-enterprise/bin/bundle install
 
 # Configure services
 * Copy Sphinx and git-daemon scripts from `gitorious/doc/templates/ubuntu` to `/etc/init.d`; change Ruby interpreter in git-daemon if you used a non-default location.  Also, you'll want to change the `Provides` line in these scripts to something without spaces.  I've used `gitorious-git-daemon` and `gitorious-ultrasphinx`.
