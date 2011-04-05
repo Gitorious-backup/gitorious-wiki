@@ -28,7 +28,7 @@ Also see the [gitorious tracker](http://gitorious.lighthouseapp.com/projects/537
 * [Merge requests: Send an email to defined address(es)](http://gitorious.lighthouseapp.com/projects/53751/tickets/9-merge-requests-send-an-email-to-defined-addresses#ticket-9-1)
 * [Cannot delete a repository](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets/10-cannot-delete-a-repository)
 * [Viewing some commits throw an error](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets/15-viewing-some-commits-throw-an-error)
-
+* When clicking on the "... pushed .. commits" link on a repository's homepage, the shown commits show the commiter name, rather than author name. The commiter's name is already shown as "top-level" (before the "pushed .. commits" text), so it is redundant to state it again, where the author name is of much more value.
 
 ## Feature Requests
 * Search commits, like cgit
