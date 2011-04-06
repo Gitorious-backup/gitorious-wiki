@@ -15,6 +15,10 @@ Users that are member of a project have one of the following roles:
   * Can edit the project settings
   * Can edit the project members
 * **Member** (i.e. normal user)
+  * Can commit to all project repositories
+* **Non-member**
+  * Can see all projects
+  * Can see and checkout all repositories
 
 ## Repository collaborators
 * **Reviewers**
