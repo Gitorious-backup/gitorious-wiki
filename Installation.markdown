@@ -4,12 +4,10 @@ If you want a automated installation script for gitorious in ubuntu you can try 
 
 [[Upgrading]]
 
-[[UbuntuInstallation]] - Step by step instructions for installing Gitorious under Ubuntu 9.04
+* [[UbuntuInstallation]] - Step by step instructions for installing Gitorious under Ubuntu 9.04
+* [[Gentoo_Installation]] - The portage way.
+* [[Rhel_Installation]] - Installation guide for RHEL 5 by some kickass team called Verso.
+* [[DebianLennyInstallation]] - Step by step instructions for install Gitorious under Debian Lenny 5.0.8
+* [[DebianSqueezeInstallation]] - Step by step instructions for install Gitorious under Debian Squeeze 6.0.0
 
-[[Gentoo_Installation]] - The portage way.
-
-[[Rhel_Installation]] - Installation guide for RHEL 5 by some kickass team called Verso.
-
-[[DebianLennyInstallation]] - Step by step instructions for install Gitorious under Debian Lenny 5.0.8
-
-[[DebianSqueezeInstallation]] - Step by step instructions for install Gitorious under Debian Squeeze 6.0.0
+After installation, see [[Configuration]].
