@@ -131,7 +131,9 @@ For this, I gave my git user temporary sudo access.  You could just execute this
     crontab -e
         PATH=/usr/local/sphinx/bin:/usr/bin:/bin
         * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/rake ultrasphinx:index RAILS_ENV=production
-    
+
+Also see [[Configuration]].
+
 # Finish
     sudo /etc/init.d/git-daemon start
     sudo /etc/init.d/git-ultrasphinx start
