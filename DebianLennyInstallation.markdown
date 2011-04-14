@@ -175,6 +175,8 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
         PATH=/usr/local/sphinx/bin:/usr/bin:/bin
         * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/rake ultrasphinx:index RAILS_ENV=production
 
+Also see [[Configuration]].
+
 # Permissions
 The gitorious documentation recommends locking down the source tree:
     sudo adduser www-data git
