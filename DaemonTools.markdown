@@ -36,13 +36,13 @@ sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/run
 
 `#!/bin/sh` 
 
-exec 2>&1
+`exec 2>&1`
 
-USER=activemq
+`USER=activemq`
 
-exec softlimit -m 1073741824 \
-setuidgid $USER \
-/usr/local/apache-activemq-5.2.0/bin/activemq
+`exec softlimit -m 1073741824 \ `
+`setuidgid $USER \ `
+`/usr/local/apache-activemq-5.2.0/bin/activemq`
 
 
 ******************************************
@@ -53,8 +53,8 @@ sudo nano /usr/local/apache-activemq-5.2.0/service/activemq/log/run
 
 `#!/bin/sh`
 
-USER=activemq
-exec setuidgid $USER multilog t s1000000 n10 ./main
+`USER=activemq`
+`exec setuidgid $USER multilog t s1000000 n10 ./main`
 
 ***********************************************************************
 ##activemq rights, ownership and soft-links#
@@ -81,12 +81,12 @@ sudo nano    /home/git/service/poller/run
 
 `#!/bin/sh`
 
-exec 2>&1
+`exec 2>&1`
 
-USER=git
+`USER=git`
 
-`#exec softlimit -m 1073741824 \`
-`#setuidgid $USER \`
+`#exec softlimit -m 1073741824 \ `
+`#setuidgid $USER \ `
 `#/var/www/gitorious/script/poller run`
 `#to get the HOME env variable to work I changed to `
 exec setuidgid $USER envdir ./env /var/www/gitorious/script/poller run
@@ -100,8 +100,8 @@ sudo nano      /home/git/service/poller/log/run
 
 `#!/bin/sh`
 
-USER=git
-exec setuidgid $USER multilog t s1000000 n10 ./main
+`USER=git`
+`exec setuidgid $USER multilog t s1000000 n10 ./main`
 
 
 *********************************************************************
@@ -130,13 +130,13 @@ sudo nano    /home/git/service/git-daemon/run
 
 `#!/bin/sh`
 
-exec 2>&1
+`exec 2>&1`
 
-USER=git
+`USER=git`
 
-exec softlimit -m 1073741824 \
-setuidgid $USER \
-/var/www/gitorious/script/git-daemon run
+`exec softlimit -m 1073741824 \ `
+`setuidgid $USER \ `
+`/var/www/gitorious/script/git-daemon run`
 
 
 ********************************************
@@ -147,8 +147,8 @@ sudo nano      /home/git/service/git-daemon/log/run
 
 `#!/bin/sh`
 
-USER=git
-exec setuidgid $USER multilog t s1000000 n10 ./main
+`USER=git`
+`exec setuidgid $USER multilog t s1000000 n10 ./main`
 
 *************************************************************************
 ##git-daemon rights, ownership and soft-links#
