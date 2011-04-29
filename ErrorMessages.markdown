@@ -1,4 +1,9 @@
-If you have a problem in your local Gitorious installation, the first thing to do is check the log file. You'll find the log file in `<GITORIOUS_ROOT>/log/<RAILS_ENV>.log`
+If you have a problem in your local Gitorious installation, the first thing to do is check the log files.
+Gitorious and its tools have several log files:
+
+* `<GITORIOUS_ROOT>/log/<RAILS_ENV>.log` (gitorious itself)
+* `<GITORIOUS_ROOT>/db/sphinx/log/* (ultrasphinx)
+* `<GITORIOUS_ROOT>/tmp/pid/* (i.e. git-poller)
 
 ## Known error messages
 
