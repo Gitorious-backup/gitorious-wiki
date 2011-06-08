@@ -13,4 +13,4 @@ The main flow goes like this:
 
 Now, if you're paying attention you'll no doubt be asking why on earth we decide in the pre-receive hook whether the user is allowing to write or not. That was certainly the case in earlier versions of Gitorious, but since then we've added a very cool feature: We allow creators of merge requests to update their own merge requests in the target repository by pushing to a special ref.
 
-These special refs are `refs/merge-requests/N` (where N is the merge rquest ID). This so that we can make it easier for people submitting merge requests to update them, and thus they'll write permissions, but **only** to those magical refs, and only of they're actually the creator of that particular merge request ID.
+These special refs are `refs/merge-requests/N` (where N is the merge rquest ID). This way we can make it easier for people submitting merge requests to update them, and thus they'll write permissions, but **only** to those magical refs, and only if they're actually the creator of that particular merge request ID.
