@@ -1,4 +1,6 @@
-If you want a automated installation script for gitorious in ubuntu you can try [this one](http://github.com/marcelomurad/rails-env-install) written by [Marcelo Murad](http://marcelomurad.com).
+[DISCONTINUED - TODO: should we remove this reference?] If you want a automated installation script for gitorious in ubuntu you can try [this one](http://github.com/marcelomurad/rails-env-install) written by [Marcelo Murad](http://marcelomurad.com).
+
+For a Chef based automated install for Debian Squeeze or recent Ubuntu you can try [these instructions](https://github.com/rosenfeld/gitorious-cookbooks).
 
 ## See Also
 
