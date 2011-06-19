@@ -63,53 +63,53 @@ For this, I gave my git user temporary sudo access.  You could just execute this
 
 # Configure services
 * Copy Sphinx and git-daemon scripts from `gitorious/doc/templates/ubuntu` to `/etc/init.d`; change Ruby interpreter in git-daemon if you used a non-default location.  Also, you'll want to change the `Provides` line in these scripts to something without spaces.  I've used `gitorious-git-daemon` and `gitorious-ultrasphinx`.
-    cd /var/www/gitorious/doc/templates/ubuntu
-    sudo cp git-daemon git-ultrasphinx /etc/init.d
+        cd /var/www/gitorious/doc/templates/ubuntu
+        sudo cp git-daemon git-ultrasphinx /etc/init.d
 * Create poller init script (see Files below)
-    sudo vi /etc/init.d/git-poller
+        sudo vi /etc/init.d/git-poller
 * Create activemq init script (see Files below)
-    sudo vi /etc/init.d/activemq
+        sudo vi /etc/init.d/activemq
 * Copy gitorious-logrotate from `gitorious/doc/templates/ubuntu` to `/etc/logrotate.d/gitorious`
-    sudo cp gitorious-logrotate /etc/logrotate.d/gitorious
+        sudo cp gitorious-logrotate /etc/logrotate.d/gitorious
 * Make init scripts run at startup
-    sudo chmod 755 /etc/init.d/git-ultrasphinx /etc/init.d/git-daemon /etc/init.d/git-poller /etc/init.d/activemq
-    sudo insserv /etc/init.d/git-ultrasphinx /etc/init.d/git-daemon /etc/init.d/git-poller /etc/init.d/activemq
+        sudo chmod 755 /etc/init.d/git-ultrasphinx /etc/init.d/git-daemon /etc/init.d/git-poller /etc/init.d/activemq
+        sudo insserv /etc/init.d/git-ultrasphinx /etc/init.d/git-daemon /etc/init.d/git-poller /etc/init.d/activemq
 * Link the gitorious script into `/usr/local/bin`
-    sudo ln -s /var/www/gitorious/script/gitorious /usr/local/bin/
+        sudo ln -s /var/www/gitorious/script/gitorious /usr/local/bin/
 
 # Configure Apache2
 * Install Passenger
-    sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
+        sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
 * Create `/etc/apache2/mods-available/passenger.load`:
-    LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5/ext/apache2/mod_passenger.so
-    PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5
-    PassengerRuby /opt/ruby-enterprise/bin/ruby
+        LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5/ext/apache2/mod_passenger.so
+        PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5
+        PassengerRuby /opt/ruby-enterprise/bin/ruby
 * Enable needed modules
-    sudo a2enmod passenger rewrite ssl xsendfile
+        sudo a2enmod passenger rewrite ssl xsendfile
 * Create /etc/apache2/sites-available/gitorious (see Files below)
 * Create /etc/apache2/sites-available/gitorious-ssl (see Files below)
 * Disable the default sites and enable the Gitorious sites
-    sudo a2dissite default default-ssl
-    sudo a2ensite gitorious gitorious-ssl
+        sudo a2dissite default default-ssl
+        sudo a2ensite gitorious gitorious-ssl
 * Restart Apache
-    sudo /etc/init.d/apache2 restart
+        sudo /etc/init.d/apache2 restart
 
 # Configure Gitorious
 * Add a git user to MySQL:
-    mysql -u root -p
-        create database gitorious_production;
-        grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'YOUR_PASSWORD';
+        mysql -u root -p
+            create database gitorious_production;
+            grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'YOUR_PASSWORD';
 * Run the following
-    sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git  
-    sudo chown -R git:git /var/www/gitorious          
-    sudo su - git  
-    mkdir .ssh  
-    touch .ssh/authorized_keys  
-    chmod -R go-rwx .ssh  
-    mkdir tmp/pids repositories tarballs  tarballs-work
-    cp config/database.sample.yml config/database.yml  
-    cp config/gitorious.sample.yml config/gitorious.yml  
-    cp config/broker.yml.example config/broker.yml
+        sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git  
+        sudo chown -R git:git /var/www/gitorious          
+        sudo su - git  
+        mkdir .ssh  
+        touch .ssh/authorized_keys  
+        chmod -R go-rwx .ssh  
+        mkdir tmp/pids repositories tarballs  tarballs-work
+        cp config/database.sample.yml config/database.yml  
+        cp config/gitorious.sample.yml config/gitorious.yml  
+        cp config/broker.yml.example config/broker.yml
 
 * Edit `config/database.yml`: Remove every section but production
 * Edit `config/gitorious.yml`:  Remove every section but production
