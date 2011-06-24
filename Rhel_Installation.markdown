@@ -1,6 +1,8 @@
 Installing and Setting Up Gitorious on RHEL 5
 =============================================
 
+** Note: Parts of the contents of this page are obsolete.** [Here is a page that takes you through installation on 64 bit Centos systems](http://famousphil.com/blog/2011/06/installing-gitorious-on-centos-5-6-x64/), written in June 2011.
+
 Marko Peltola
 2010-06-15 (Updated: 2010-08-11)
 
