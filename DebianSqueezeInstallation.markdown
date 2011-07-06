@@ -3,7 +3,7 @@ This article is a rip off [Setting up gitorious on your own server](http://cjoha
 The following steps should take you from a freshly installed copy of Debian Squeeze 6.0.0 to a fully functioning Gitorious server.
 
 # Install packages
-# If you use MariaDB instead of MySQL, s/mysql/mariadb/g
+    # If you use MariaDB instead of MySQL, s/mysql/mariadb/g
     sudo aptitude update  
     sudo aptitude install build-essential zlib1g-dev libcurl4-openssl-dev \
                 apache2 mysql-server mysql-client apg geoip-bin libgeoip1 \
