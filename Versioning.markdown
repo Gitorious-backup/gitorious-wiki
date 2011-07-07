@@ -38,7 +38,7 @@ Each minor version will be published with a separate upgrade guide here in the w
 Major versions
 ============
 
-Major versions will presumably occur infrequently, and there is no specific rules to trigger an upgrade. Our rool of thumb right now is that if a new version of Gitorious requires an entirely new installation guide of its own, it's probably a major release. However, we may also up the major version number due to the addition of substantial new features, redesigns and whatnot.
+Major versions will presumably occur infrequently, and there is no specific rules to trigger an upgrade. Our rule of thumb right now is that if a new version of Gitorious requires an entirely new installation guide of its own, it's probably a major release. However, we may also up the major version number due to the addition of substantial new features, redesigns and whatnot.
 
 How often/when will Gitorious update its version?
 ======================================
