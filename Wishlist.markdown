@@ -1,3 +1,8 @@
+As of 2011/07/07, this page and the old issue tracker ([this one](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets)) is deprecated. Please report issues and feature requests at [issues.gitorious.org](issues.gitorious.org).
+
+
+Old page kept for reference
+
 Please feel free to add bugs and/or feature requests below.
 
 Also see the [gitorious tracker](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets).
@@ -73,10 +78,3 @@ Also see the [gitorious tracker](http://gitorious.lighthouseapp.com/projects/537
 * README "à la github" where you can create a README.md in a wiki markup and used as a source for the webpage at gitorious. That would allow users from github to share more easily with gitorious.org. http://github.com/guides/readme-formatting
 * add headers to watch notification emails, in order to make it easier to filter notification to mailbxoes according to project, committer, etc. pretty much like bugzilla does in its notification
 * add graph page for project/repository statistics
-
-
-## Discussion
-Does it make sense having two places where bugs/features can be reported/requested:
-* http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets
-* and here?
-* Which is the main place for bug reports/feature request?
