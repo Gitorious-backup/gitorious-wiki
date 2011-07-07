@@ -80,3 +80,5 @@ If you don't wish for that (and for an internal install you probably wouldn't), 
 ### That's it
 
 Congrats, hopefully your existing gitorious installation should be up and running, but if you run into any issues drop an email on [the mailing list](http://groups.google.com/group/gitorious).
+
+To keep your Gitorious up to date, refer to the new [[Upgrading]] guide.
