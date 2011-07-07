@@ -47,7 +47,7 @@ Assuming you are on v2.0.0, run your app with [Phusion Passenger](http://www.mod
     >> bundle exec rake changelog
     Available versions
        v2.0.1              Next increment
-    -> v2.0.0              This "major release" is probably even less eventful than the recent
+    -> v2.0.0              First versioned version of Gitorious
 
 Obviously, there's a new version in town, so let's see what it offers:
 
