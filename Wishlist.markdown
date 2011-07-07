@@ -3,10 +3,6 @@ As of 2011/07/07, this page and the old issue tracker ([this one](http://gitorio
 
 Old page kept for reference
 
-Please feel free to add bugs and/or feature requests below.
-
-Also see the [gitorious tracker](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets).
-
 ## Bugs
 * diff display sometimes hilights wrong parts of lines (or no parts at all) when tab is changed to spaces in the middle of lines. See changes to track_info.h here: http://gitorious.org/jasonwoof/cmus/commit/ef82f70f073e537e3677ad0d79d50acb4c667d87
 * Edit team page lacks button to "Delete current team image" (the edit person page has this) [DONE]
