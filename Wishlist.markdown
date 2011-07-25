@@ -1,4 +1,4 @@
-As of 2011/07/07, this page and the old issue tracker ([this one](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets)) is deprecated. Please report issues and feature requests at [issues.gitorious.org](issues.gitorious.org).
+As of 2011/07/07, this page and the old issue tracker ([this one](http://gitorious.lighthouseapp.com/projects/53751-gitorious-dot-org/tickets)) is deprecated. Please report issues and feature requests at [issues.gitorious.org](http://issues.gitorious.org).
 
 
 Old page kept for reference
