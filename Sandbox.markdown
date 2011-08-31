@@ -5,7 +5,7 @@ Lorem *ipsum* dolor sit _amet_, consectetur adipisicing elit, sed do eiusmod tem
 
 An image
 
-<img alt="" src="https://gitorious.org/img/logo.png">
+<img alt="Oh Oh Oh" src="https://gitorious.org/img/logo.png" />
 
 A shopping list!
 ----------------------
