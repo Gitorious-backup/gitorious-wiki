@@ -1,0 +1,1 @@
+Some of Gitorious' information can be extracted programmatically.
