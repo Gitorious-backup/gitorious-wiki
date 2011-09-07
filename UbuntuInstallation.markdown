@@ -7,7 +7,7 @@ There are additional installation guides for other Ubuntu versions:
 * [Ubuntu 10.04](http://www.silly-science.co.uk/2010/12/12/installing-gitorious-on-ubuntu-10-04-howto/)
 * [Ubuntu 11.04](http://coding-journal.com/installing-gitorious-on-ubuntu-11-04/)
 
-# Installing Gitorious on Ubuntu 11.04
+# Installing Gitorious on Ubuntu 9.10
 
 The following steps should take you from a freshly installed copy of Ubuntu Server 9.10 to a fully functioning Gitorious server.
 
