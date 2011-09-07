@@ -1,8 +1,17 @@
-Note: I can confirm that this documentation works with Ubuntu Server 9.10, another documentation can be found here: [Setting up gitorious on your own server](http://cjohansen.no/en/ruby/setting_up_gitorious_on_your_own_server)
+# Preamble
+
+Note: I can confirm that this documentation works with Ubuntu Server 9.10, another documentation can be found here: [Setting up gitorious on your own server](http://cjohansen.no/en/ruby/setting_up_gitorious_on_your_own_server).
+
+There are additional installation guides for other Ubuntu versions:
+
+* [Ubuntu 10.04](http://www.silly-science.co.uk/2010/12/12/installing-gitorious-on-ubuntu-10-04-howto/)
+* [Ubuntu 11.04](http://coding-journal.com/installing-gitorious-on-ubuntu-11-04/)
+
+# Installing Gitorious on Ubuntu 11.04
 
 The following steps should take you from a freshly installed copy of Ubuntu Server 9.10 to a fully functioning Gitorious server.
 
-# Install packages
+## Install packages
     aptitude update  
     aptitude install build-essential zlib1g-dev tcl-dev libexpat-dev \
         libcurl4-openssl-dev postfix apache2 mysql-server mysql-client \
@@ -13,7 +22,7 @@ The following steps should take you from a freshly installed copy of Ubuntu Serv
         libmagick++-dev  zip unzip memcached git-core git-svn git-doc \
         git-cvs irb
 
-# Install Ruby gems
+## Install Ruby gems
     gem install -b --no-ri --no-rdoc rmagick chronic geoip daemons hoe \
         echoe ruby-yadis ruby-openid mime-types diff-lcs json rack \
         ruby-hmac rake stompserver passenger rails
@@ -23,19 +32,19 @@ The following steps should take you from a freshly installed copy of Ubuntu Serv
     ln -s /var/lib/gems/1.8/bin/rake /usr/bin  
     ln -s /var/lib/gems/1.8/bin/stompserver /usr/bin
 
-# Install Sphinx
+## Install Sphinx
 Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/downloads/sphinx-0.9.8.1.tar.gz`)
     ./configure --prefix=/usr && make all install
 
-# Fetch Gitorious
+## Fetch Gitorious
     git clone git://gitorious.org/gitorious/mainline.git /var/www/gitorious  
 -- or --  
     git clone http://git.gitorious.org/gitorious/mainline.git /var/www/gitorious
 
-# Put gitorious binary on path
+## Put gitorious binary on path
     ln -s /var/www/gitorious/script/gitorious /usr/bin
 
-# Configure services
+## Configure services
 * Copy Sphinx and git-daemon scripts from gitorious/doc/templates/ubuntu to /etc/init.d; change Ruby interpreter in git-daemon to /usr/bin/ruby
 * Create stomp init script (see Files below)
 * Create poller init script (see Files below)
@@ -47,7 +56,7 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
         update-rc.d git-ultrasphinx defaults
         update-rc.d git-poller defaults
 
-# Configure Apache
+## Configure Apache
 * Install Passenger
         /var/lib/gems/1.8/bin/passenger-install-apache2-module 
 * Create /etc/apache2/mods-available/passenger.load:
@@ -71,7 +80,7 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
         a2ensite gitorious  
         a2ensite gitorious-ssl
 
-# Configure Gitorious
+## Configure Gitorious
 * Run the following
 
         adduser --system --home /var/www/gitorious/ --no-create-home --group --shell /bin/bash git  
@@ -108,13 +117,13 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
         crontab -e  
             * * * * * cd /var/www/gitorious && /usr/bin/rake ultrasphinx:index RAILS_ENV=production
 
-# Finish
+## Finish
 * As root, `/etc/init.d/apache2 restart`
 
 * Create a Admin User as User 'git':
        env RAILS_ENV=production ruby1.8 script/create_admin
 
-# Console User Administration
+## Console User Administration
 * Delete a User
        env RAILS_ENV=production ruby1.8 script/console
        > user = User.find_by_login "Username"
@@ -124,7 +133,7 @@ Download source from www.sphinxsearch.com (currently `http://sphinxsearch.com/do
         > Role.create!(:name => "Member", :kind => Role::KIND_MEMBER)
         > Role.create!(:name => "Administrator", :kind => Role::KIND_ADMIN) 
 
-# Files
+## Files
 
 /etc/apache2/sites-available/gitorious
     <VirtualHost *:80>
