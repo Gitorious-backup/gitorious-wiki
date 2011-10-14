@@ -27,10 +27,15 @@ Upgrading patch versions
 
 As per our [[Versioning]] manifesto, patch upgrades should be trivial in nature. The steps are simple:
 
-    cd /path/to/gitorious
-    git fetch git://gitorious.org/gitorious/mainline.git
-    git merge v2.x.y
-    rm public/stylesheets/all.css public/javascripts/all.js
+    >> cd /path/to/gitorious
+    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git merge v2.x.y
+    >> rm public/stylesheets/all.css public/javascripts/all.js rm public/**/*/gts-*.*
+
+As of 2.1.0 you also need these steps for any upgrade:
+
+    >> git submodule init
+    >> git submodule update
 
 Finally, restart all services. This includes the webserver, the poller and the git daemon. x/y depends on the actual version.
 
@@ -58,11 +63,33 @@ Obviously, there's a new version in town, so let's see what it offers:
 This looks good, so let's upgrade:
 
     git fetch git://gitorious.org/gitorious/mainline.git
-    git merge v2.0
+    git merge v2.0.0
     rm public/stylesheets/all.css public/javascripts/all.js
     touch tmp/restart.txt
 
 Upgrading minor versions
 ====================
 
-Minor versions will come with individual upgrade notes. Check back here when the time for 2.1 comes.
+Minor versions will come with individual upgrade notes.
+
+Upgrading from 2.0.x to 2.1
+------------------------------------
+
+You can upgrade directly from any 2.0.x version directly to 2.1.0. Start by reviewing changes:
+
+    >> bundle exec rake changelog VERSION=2.1.0
+
+If this looks good, back up everything (see above), and get started:
+
+    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git merge v2.1.0
+    >> rm public/stylesheets/all.css public/javascripts/all.js
+
+Gitorious now has submodules. Initialize and pull them:
+
+    >> git submodule init
+    >> git submodule update
+
+Then restart your server (assuming you're using Passenger):
+
+    >> touch tmp/restart.txt
