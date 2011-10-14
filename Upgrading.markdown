@@ -30,7 +30,9 @@ As per our [[Versioning]] manifesto, patch upgrades should be trivial in nature.
     >> cd /path/to/gitorious
     >> git fetch git://gitorious.org/gitorious/mainline.git
     >> git merge v2.x.y
-    >> rm public/stylesheets/all.css public/javascripts/all.js rm public/**/*/gts-*.* public/javascripts/capillary.rb
+    >> rake assets:clear
+
+Note that `rake assets:clear` was not available prior to 2.1.0. 2.0.x can be directly upgraded to 2.1.0, see below.
 
 As of 2.1.0 you also need these steps for any upgrade:
 
