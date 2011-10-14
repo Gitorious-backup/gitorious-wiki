@@ -67,11 +67,6 @@ This looks good, so let's upgrade:
     rm public/stylesheets/all.css public/javascripts/all.js
     touch tmp/restart.txt
 
-Upgrading minor versions
-====================
-
-Minor versions will come with individual upgrade notes.
-
 Upgrading from 2.0.x to 2.1
 ------------------------------------
 
