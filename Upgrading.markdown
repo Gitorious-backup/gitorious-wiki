@@ -72,6 +72,8 @@ This looks good, so let's upgrade:
 Upgrading from 2.0.x to 2.1
 ------------------------------------
 
+NOTE: 2.1.0 is not yet final. It will be available sometime week 42.
+
 You can upgrade directly from any 2.0.x version directly to 2.1.0. Start by reviewing changes:
 
     >> bundle exec rake changelog VERSION=2.1.0
