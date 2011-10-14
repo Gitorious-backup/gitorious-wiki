@@ -30,7 +30,7 @@ As per our [[Versioning]] manifesto, patch upgrades should be trivial in nature.
     >> cd /path/to/gitorious
     >> git fetch git://gitorious.org/gitorious/mainline.git
     >> git merge v2.x.y
-    >> rm public/stylesheets/all.css public/javascripts/all.js rm public/**/*/gts-*.*
+    >> rm public/stylesheets/all.css public/javascripts/all.js rm public/**/*/gts-*.* public/javascripts/capillary.rb
 
 As of 2.1.0 you also need these steps for any upgrade:
 
@@ -64,7 +64,7 @@ This looks good, so let's upgrade:
 
     git fetch git://gitorious.org/gitorious/mainline.git
     git merge v2.0.0
-    rm public/stylesheets/all.css public/javascripts/all.js
+    rm public/stylesheets/all.css public/javascripts/all.js public/javascripts/capillary.js public/**/*/gts-*.*
     touch tmp/restart.txt
 
 Upgrading from 2.0.x to 2.1
@@ -78,7 +78,7 @@ If this looks good, back up everything (see above), and get started:
 
     >> git fetch git://gitorious.org/gitorious/mainline.git
     >> git merge v2.1.0
-    >> rm public/stylesheets/all.css public/javascripts/all.js
+    >> rake assets:clear
 
 Gitorious now has submodules. Initialize and pull them:
 
