@@ -4,7 +4,7 @@ The following steps should take you from a freshly installed copy of Debian Sque
 
 # Install packages
     # If you use MariaDB instead of MySQL, s/mysql/mariadb/g
-    sudo aptitude update  
+    sudo aptitude update
     sudo aptitude install build-essential zlib1g-dev libcurl4-openssl-dev \
                 apache2 mysql-server mysql-client apg geoip-bin libgeoip1 \
                 libgeoip-dev libpcre3 libpcre3-dev zlib1g zlib1g-dev libyaml-dev \
@@ -19,7 +19,7 @@ I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combinatio
     tar zxf ruby-enterprise-1.8.7-2011.03.tar.gz
     sudo ruby-enterprise-1.8.7-2011.03/installer
     cd /opt && sudo ln -s ruby-enterprise-1.8.7-2011.03/ ruby-enterprise
-    sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin 
+    sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin
 
 # Install Sphinx
 Compile latest version (currently 0.9.9)
@@ -36,7 +36,7 @@ Download the latest [binaries](http://www.apache.org/dyn/closer.cgi?path=/active
     sudo mv apache-activemq-5.4.2 /usr/local
     cd /usr/local && sudo ln -s apache-activemq-5.4.2 apache-activemq && cd apache-activemq
     sudo bin/activemq setup /etc/default/activemq && sudo chmod 600 /etc/default/activemq
-    sudo adduser --system --no-create-home --home /usr/local/apache-activemq --shell /bin/bash activemq 
+    sudo adduser --system --no-create-home --home /usr/local/apache-activemq --shell /bin/bash activemq
     sudo chown -R activemq:nogroup /usr/local/apache-activemq-5.4.2
 
 Edit `/etc/default/activemq` and add to the beginning of the file:
@@ -54,8 +54,8 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
         </transportConnectors>
 
 # Fetch Gitorious
-    sudo git clone git://gitorious.org/gitorious/mainline.git /var/www/gitorious  
--- or --  
+    sudo git clone git://gitorious.org/gitorious/mainline.git /var/www/gitorious
+-- or --
     sudo git clone http://git.gitorious.org/gitorious/mainline.git /var/www/gitorious
 
 # Install Ruby gems
@@ -80,7 +80,7 @@ For this, I gave my git user temporary sudo access.  You could just execute this
 
 # Configure Apache2
 * Install Passenger
-        sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module 
+        sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module
 * Create `/etc/apache2/mods-available/passenger.load`:
         LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5/ext/apache2/mod_passenger.so
         PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5
@@ -101,15 +101,15 @@ For this, I gave my git user temporary sudo access.  You could just execute this
             create database gitorious_production;
             grant all privileges on gitorious_production.* to 'git'@'localhost' identified by 'YOUR_PASSWORD';
 * Run the following
-        sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git  
-        sudo chown -R git:git /var/www/gitorious          
-        sudo su - git  
-        mkdir .ssh  
-        touch .ssh/authorized_keys  
-        chmod -R go-rwx .ssh  
+        sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git
+        sudo chown -R git:git /var/www/gitorious
+        sudo su - git
+        mkdir .ssh
+        touch .ssh/authorized_keys
+        chmod -R go-rwx .ssh
         mkdir tmp/pids repositories tarballs  tarballs-work
-        cp config/database.sample.yml config/database.yml  
-        cp config/gitorious.sample.yml config/gitorious.yml  
+        cp config/database.sample.yml config/database.yml
+        cp config/gitorious.sample.yml config/gitorious.yml
         cp config/broker.yml.example config/broker.yml
 
 * Edit `config/database.yml`: Remove every section but production
@@ -153,7 +153,7 @@ Also see [[Configuration]].
 * Create Roles
         env RAILS_ENV=production script/console
         > Role.create!(:name => "Member", :kind => Role::KIND_MEMBER)
-        > Role.create!(:name => "Administrator", :kind => Role::KIND_ADMIN) 
+        > Role.create!(:name => "Administrator", :kind => Role::KIND_ADMIN)
 
 # Files
 
@@ -172,7 +172,7 @@ Also see [[Configuration]].
 
             <IfModule mod_xsendfile.c>
                     XSendFile on
-                    XSendFileAllowAbove on  
+                    XSendFileAllowAbove on
             </IfModule>
 
 
@@ -205,7 +205,7 @@ Also see [[Configuration]].
 
         <IfModule mod_xsendfile.c>
                 XSendFile on
-                XSendFileAllowAbove on  
+                XSendFileAllowAbove on
         </IfModule>
 
 
@@ -226,17 +226,18 @@ Also see [[Configuration]].
     /usr/local/apache-activemq/bin/activemq "$@"
 
 /etc/init.d/git-poller
-    #!/bin/sh  
-    # Start/stop the git poller  
-    #  
-    ### BEGIN INIT INFO  
-    # Provides:          git-poller  
+    #!/bin/sh
+    # Start/stop the git poller
+    #
+    ### BEGIN INIT INFO
+    # Provides:          git-poller
     # Required-Start:    activemq
     # Required-Stop:  activemq
-    # Default-Start:     2 3 4 5  
-    # Default-Stop:      1  
-    # Short-Description: Gitorious poller  
-    # Description:       Gitorious poller  
+    # Default-Start:     2 3 4 5
+    # Default-Stop:      1
+    # Short-Description: Gitorious poller
+    # Description:       Gitorious poller
     ### END INIT INFO
      
     /bin/su - git -c "cd /var/www/gitorious;RAILS_ENV=production script/poller $@"
+
