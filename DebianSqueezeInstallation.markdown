@@ -10,7 +10,8 @@ The following steps should take you from a freshly installed copy of Debian Sque
                 libgeoip-dev libpcre3 libpcre3-dev zlib1g zlib1g-dev libyaml-dev \
                 libmysqlclient-dev apache2-dev libonig-dev zip unzip memcached \
                 git-core git-svn git-doc git-cvs libreadline-dev openjdk-6-jre \
-                sqlite3 libsqlite3-dev libmagick++3 libmagick++-dev libapache2-mod-xsendfile
+                sqlite3 libsqlite3-dev libmagick++3 libmagick++-dev libapache2-mod-xsendfile \
+                libxslt1-dev libreadline.so.5
 
 
 # Install Ruby enterprise
@@ -240,4 +241,3 @@ Also see [[Configuration]].
     ### END INIT INFO
      
     /bin/su - git -c "cd /var/www/gitorious;RAILS_ENV=production script/poller $@"
-
