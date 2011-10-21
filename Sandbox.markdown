@@ -13,12 +13,14 @@ A shopping list!
 * milk
 * bread
 * butter
+* cheese
 
 in order:
 
 1. bread
 2. milk
 3. butter
+4. cheese
 
 ### Some code
 
