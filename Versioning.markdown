@@ -13,7 +13,7 @@ We will do our best to keep releases stable. Every release will be run in produc
 Patch versions
 ============
 
-Patch versions indicate changes with minor impact for installs. In general, the rools for patch versions are:
+Patch versions indicate changes with minor impact for installs. In general, the rules for patch versions are:
 
 * Should not require database migrations
 * Should not require configuration changes or additions
