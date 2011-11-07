@@ -82,6 +82,7 @@ For this, I gave my git user temporary sudo access.  You could just execute this
 # Configure Apache2
 * Install Passenger
         sudo /opt/ruby-enterprise/bin/passenger-install-apache2-module
+        if you get an error make this before to continue ( sudo /opt/ruby-enterprise/bin/gem install passenger)
 * Create `/etc/apache2/mods-available/passenger.load`:
         LoadModule passenger_module /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5/ext/apache2/mod_passenger.so
         PassengerRoot /opt/ruby-enterprise/lib/ruby/gems/1.8/gems/passenger-3.0.5
