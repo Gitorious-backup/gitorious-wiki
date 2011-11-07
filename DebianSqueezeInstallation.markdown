@@ -115,6 +115,8 @@ For this, I gave my git user temporary sudo access.  You could just execute this
         cp config/broker.yml.example config/broker.yml
 
 * Edit `config/database.yml`: Remove every section but production
+  * `username` should be `git`
+  * `password` should be the password indicated in 2 before sections
 * Edit `config/gitorious.yml`:  Remove every section but production
   * `repository_base_path` should be something like `/var/www/gitorious/repositories`
   * `gitorious_client_port` should be 80
