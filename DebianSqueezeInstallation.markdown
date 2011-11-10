@@ -106,6 +106,8 @@ For this, I gave my git user temporary sudo access.  You could just execute this
         sudo adduser --system --home /var/www/gitorious --no-create-home --group --shell /bin/bash git
         sudo chown -R git:git /var/www/gitorious
         sudo su - git
+        git submodule init
+        git submodule update
         mkdir .ssh
         touch .ssh/authorized_keys
         chmod -R go-rwx .ssh
