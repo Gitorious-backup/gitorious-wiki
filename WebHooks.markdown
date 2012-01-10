@@ -20,48 +20,39 @@ The overall functionality is as follows:
 Whenever a user pushes one or several commits to Gitorious, one JSON request will be made. This is a HTTP POST request with a single parameter: `payload` containing the JSON data about the push. This is an example of such a payload for a fictional repository:
 
 <code>
+payload 	
+
 {
-  "after": "34f5a766e48bd270037350961d79fa59f9b746d7", 
-  "before": "d46f9c3ee6d4eca4e8248f4cabf782e1f1e79fa9", 
+  "after": "df5744f7bc8663b39717f87742dc94f52ccbf4dd", 
+  "before": "b4ca2d38e756695133cbd0e03d078804e1dc6610", 
   "commits": [
     {
       "author": {
-        "email": "marius@shortcut.no", 
-        "name": "Marius Mathiesen"
+        "email": "jason@nospam.org", 
+        "name": "jason"
       }, 
-      "committed_at": "2010-08-10T09:06:08Z", 
-      "id": "34f5a766e48bd270037350961d79fa59f9b746d7", 
-      "message": "Must be", 
-      "timestamp": "2010-08-10T09:06:08Z", 
-      "url": "http:\/\/gitorious.here\/web-hooks\/web-hooks\/commit\/34f5a766e48bd270037350961d79fa59f9b746d7"
-    }, 
-    {
-      "author": {
-        "email": "marius@shortcut.no", 
-        "name": "Marius Mathiesen"
-      }, 
-      "committed_at": "2010-08-10T09:05:56Z", 
-      "id": "0ceada81a4300abdf703724ea045d15055943c6b", 
-      "message": "Are we having fun yet?", 
-      "timestamp": "2010-08-10T09:05:56Z", 
-      "url": "http:\/\/gitorious.here\/web-hooks\/web-hooks\/commit\/0ceada81a4300abdf703724ea045d15055943c6b"
+      "committed_at": "2012-01-10T11:02:27-07:00", 
+      "id": "df5744f7bc8663b39717f87742dc94f52ccbf4dd", 
+      "message": "added a place to put the docstring for Book", 
+      "timestamp": "2012-01-10T11:02:27-07:00", 
+      "url": "http:\/\/gitorious.org\/q\/mainline\/commit\/df5744f7bc8663b39717f87742dc94f52ccbf4dd"
     }
   ], 
   "project": {
-    "description": "Trying out web hooks", 
-    "name": "web-hooks"
+    "description": "q is a django project for hosting and organizing your ebook collection.", 
+    "name": "q"
   }, 
-  "pushed_at": "2010-08-10T09:06:13Z", 
-  "pushed_by": "johan", 
-  "ref": "refs\/heads\/master", 
+  "pushed_at": "2012-01-10T11:09:25-07:00", 
+  "pushed_by": "jason", 
+  "ref": "new_look", 
   "repository": {
-    "clones": 0, 
-    "description": "A simple repository", 
-    "name": "web-hooks", 
+    "clones": 4, 
+    "description": "", 
+    "name": "mainline", 
     "owner": {
-      "name": "johan"
+      "name": "jason"
     }, 
-    "url": "http:\/\/gitorious.here\/web-hooks\/web-hooks"
+    "url": "http:\/\/gitorious.org\/q\/mainline"
   }
 }
 </code>
