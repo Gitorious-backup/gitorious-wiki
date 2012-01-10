@@ -20,8 +20,6 @@ The overall functionality is as follows:
 Whenever a user pushes one or several commits to Gitorious, one JSON request will be made. This is a HTTP POST request with a single parameter: `payload` containing the JSON data about the push. This is an example of such a payload for a fictional repository:
 
 <code>
-payload 	
-
 {
   "after": "df5744f7bc8663b39717f87742dc94f52ccbf4dd", 
   "before": "b4ca2d38e756695133cbd0e03d078804e1dc6610", 
