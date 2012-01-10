@@ -17,7 +17,7 @@ The overall functionality is as follows:
 
 ## An example of the payload
 
-Whenever a user pushes one or several commits to Gitorious, one JSON request will be made. This is a HTTP POST request with a single parameter: `payload` containing the JSON data about the push. This is an example of such a payload for a fictional repository:
+Whenever a user pushes one or several commits to Gitorious, one JSON request will be made. This is a HTTP POST request with a single parameter: `payload` containing the JSON data about the push. This is an example of such a payload for a fictional repository (Login, edit this page, and copy the payload from the text box to get valid JSON):
 
 <code>
 {
