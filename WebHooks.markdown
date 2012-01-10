@@ -37,7 +37,7 @@ Whenever a user pushes one or several commits to Gitorious, one JSON request wil
     }
   ], 
   "project": {
-    "description": "q is a django project for hosting and organizing your ebook collection.", 
+    "description": "a webapp to organize your ebook collectsion.", 
     "name": "q"
   }, 
   "pushed_at": "2012-01-10T11:09:25-07:00", 
