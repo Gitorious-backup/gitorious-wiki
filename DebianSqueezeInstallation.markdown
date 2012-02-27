@@ -32,13 +32,13 @@ Compile latest version (currently 2.0.3)
     sudo ln -s /usr/local/sphinx/bin/* /usr/local/bin
 
 # Install Apache ActiveMQ
-Download the latest [binaries](http://www.apache.org/dyn/closer.cgi?path=/activemq/apache-activemq/5.4.3/apache-activemq-5.4.3-bin.tar.gz) (currently 5.4.3):
-    tar zxf apache-activemq-5.4.3-bin.tar.gz
-    sudo mv apache-activemq-5.4.3 /usr/local
-    cd /usr/local && sudo ln -s apache-activemq-5.4.3 apache-activemq && cd apache-activemq
+Download the latest [binaries](http://www.apache.org/dyn/closer.cgi?path=%2Factivemq%2Fapache-activemq%2F5.5.1%2Fapache-activemq-5.5.1-bin.tar.gz) (currently 5.5.1):
+    tar zxf apache-activemq-5.5.1-bin.tar.gz
+    sudo mv apache-activemq-5.5.1 /usr/local
+    cd /usr/local && sudo ln -s apache-activemq-5.5.1 apache-activemq && cd apache-activemq
     sudo bin/activemq setup /etc/default/activemq && sudo chmod 600 /etc/default/activemq
     sudo adduser --system --no-create-home --home /usr/local/apache-activemq --shell /bin/bash activemq
-    sudo chown -R activemq:nogroup /usr/local/apache-activemq-5.4.3
+    sudo chown -R activemq:nogroup /usr/local/apache-activemq-5.5.1
 
 Edit `/etc/default/activemq` and add to the beginning of the file:
     ACTIVEMQ_HOME=/usr/local/apache-activemq
