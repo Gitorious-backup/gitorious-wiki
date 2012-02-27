@@ -59,6 +59,9 @@ Edit `/usr/local/apache-activemq/conf/activemq.xml`.  Comment out the existing t
 -- or --
     sudo git clone http://git.gitorious.org/gitorious/mainline.git /var/www/gitorious
 
+With release 2.0.0 gitorious began tagging releases as outlined [here](https://gitorious.org/gitorious/pages/Versioning).  This provides for cleaner and hopefully safer transitions between versions.  For each new version, I basically checkout a new branch based off a tag.  That way, I can make changes or merge into my own branch.
+ git checkout -b my2.1.1 v2.1.1
+
 # Install Ruby gems
 For this, I gave my git user temporary sudo access.  You could just execute this as root as well.
     cd /var/www/gitorious &&  /opt/ruby-enterprise/bin/bundle install
