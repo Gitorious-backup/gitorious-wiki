@@ -23,12 +23,12 @@ I'm already using Phusion's Ruby Enterprise Edition (REE) + passenger combinatio
     sudo ln -s /opt/ruby-enterprise/bin/ruby /opt/ruby-enterprise/bin/rake /opt/ruby-enterprise/bin/gem /usr/local/bin
 
 # Install Sphinx
-Compile latest version (currently 0.9.9)
-    wget http://sphinxsearch.com/files/sphinx-0.9.9.tar.gz
-    tar zxf sphinx-0.9.9.tar.gz && cd sphinx-0.9.9
-    ./configure --prefix=/usr/local/sphinx-0.9.9
+Compile latest version (currently 2.0.3)
+    wget http://sphinxsearch.com/files/sphinx-2.0.3-release.tar.gz
+    tar zxf sphinx-2.0.3-release.tar.gz && cd sphinx-2.0.3
+    ./configure --prefix=/usr/local/sphinx-2.0.3
     make && sudo make install
-    cd /usr/local && sudo ln -s sphinx-0.9.9 sphinx
+    cd /usr/local && sudo ln -s sphinx-2.0.3 sphinx
     sudo ln -s /usr/local/sphinx/bin/* /usr/local/bin
 
 # Install Apache ActiveMQ
