@@ -133,14 +133,14 @@ For this, I gave my git user temporary sudo access.  You could just execute this
 * Run the following
         
     export RAILS_ENV=production
-    rake db:create
-    rake db:migrate
+    bundle exec rake db:create
+    bundle exec rake db:migrate
     export PATH=/usr/local/sphinx/bin:$PATH
-    rake ultrasphinx:bootstrap
+    bundle exec rake ultrasphinx:bootstrap
 
     crontab -e
         PATH=/usr/local/sphinx/bin:/usr/bin:/bin
-        * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/rake ultrasphinx:index RAILS_ENV=production
+        * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/bundle exec /opt/ruby-enterprise/bin/rake ultrasphinx:index RAILS_ENV=production
 
 Also see [[Configuration]].
 
