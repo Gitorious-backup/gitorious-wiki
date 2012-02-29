@@ -6,14 +6,12 @@ As of version 2.2.0, Gitorious supports private repositories. This is a feature 
 
 Private repositories will ship with Gitorious 2.2.0. Until then, you can run off of the `private-repos` branch to test it out:
 
-```
-git checkout -b private-repos
-git pull git://gitorious.org/gitorious/mainline.git refs/heads/private-repos
-bundle
-bundle exec rake db:migrate
-bundle exec rake assets:clear
-touch tmp/restart.txt
-```
+    git checkout -b private-repos
+    git pull git://gitorious.org/gitorious/mainline.git refs/heads/private-repos
+    bundle
+    bundle exec rake db:migrate
+    bundle exec rake assets:clear
+    touch tmp/restart.txt
 
 This assumes you are using [Passenger](http://www.modrails.com/). Adjust accordingly if you are not.
 
@@ -21,9 +19,7 @@ This assumes you are using [Passenger](http://www.modrails.com/). Adjust accordi
 
 To enable private repositories, open your `config/gitorious.yml` and add the following setting to the desired environment:
 
-```
-  enable_private_repositories: true
-```
+    enable_private_repositories: true
 
 Then restart your server.
 
