@@ -38,6 +38,8 @@ As of 2.1.0 you also need these steps for any upgrade:
 
     >> git submodule init
     >> git submodule update
+    >> rake db:migrate
+
 
 Finally, restart all services. This includes the webserver, the poller and the git daemon. x/y depends on the actual version.
 
@@ -86,6 +88,10 @@ Gitorious now has submodules. Initialize and pull them:
 
     >> git submodule init
     >> git submodule update
+
+Upgrade the database:
+
+    >> rake db:migrate
 
 Then restart your server (assuming you're using Passenger):
 
