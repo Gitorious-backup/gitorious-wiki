@@ -96,3 +96,27 @@ Upgrade the database:
 Then restart your server (assuming you're using Passenger):
 
     >> touch tmp/restart.txt
+
+Upgrading from 2.1.x to 2.2
+------------------------------------
+
+You can upgrade directly from any 2.1.x version directly to 2.2.0. Start by reviewing changes:
+
+    >> bundle exec rake changelog VERSION=2.2.0
+
+If this looks good, back up everything (see above), and get started:
+
+    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git merge v2.2.0
+    >> rake assets:clear
+    >> git submodule --init update
+
+Upgrade the database:
+
+    >> rake db:migrate
+
+Then restart your server (assuming you're using Passenger):
+
+    >> touch tmp/restart.txt
+
+If you want to use the new [private repositories feature](https://gitorious.org/gitorious/pages/PrivateRepositories), set the `enable_private_repositories` setting to `true` in config/gitorious.yml. See the sample configuration in config/gitorious.sample.yml for more information.
