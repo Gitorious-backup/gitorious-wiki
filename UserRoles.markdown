@@ -30,3 +30,13 @@ Users that are member of a project have one of the following roles:
   * Can edit the repository name, description and settings
   * Can manage collaborators
   * Can delete the repository
+
+# Modifying Roles
+## Set an existing user as admin
+Use the Gitorious "console" tool to modify the "is_admin" option for a user.
+
+    RAILS_ENV=production script/console
+    >> user = User.find_by_login "kdreyer"  
+    >> user.is_admin = true
+    >> user.save
+    >> exit
