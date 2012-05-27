@@ -30,7 +30,7 @@ When private repositories are enabled, Gitorious will authorize most content thr
 ### Private projects
 When creating a new project, you will see a new checkbox that you can check to make the project private. When the project is private, only its owner can browse it, see events from it, clone and browse repositories under it and so on. After creating the project, you can use the "Manage access" button in the right column to add collaborators (users and groups) that will be able to browse the project as well.
 
-A project can be made private retroactively also. Click the "manage access" button in the right column on the project page and then hit "make private". Making the project will make every repository under it private as well - including repository clones. This means that making a project private may block users out of their repository clones if they are not given access to the project as well. Use with care!
+A project can be made private retroactively also. Click the "manage access" button in the right column on the project page and then hit "make private". Making the project private will make every repository under it private as well - including repository clones. This means that making a project private may block users out of their repository clones if they are not given access to the project as well. Use with care!
 
 If you want to open a private project to the public, simply go to "manage access", then hit "make public". Note that "public" in this case means public within Gitorious. If your Gitorious is running in "private mode", only registered and logged in users will actually be able to see "public" projects.
 
