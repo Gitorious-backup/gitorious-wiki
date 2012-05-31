@@ -54,7 +54,7 @@ Eventually, Gitorious will ship with Git over HTTP using [mutt](https://gitoriou
 
 ## The git:// protocol ##
 
-`git://` cloning may still be used with private repositories, but because it is an anonymous protocol, it can only be used to pull public repositories. The `git-daemon` has full authorization support, which means it will prevet access to repositories that are locked down through other measures than database authorization.
+`git://` cloning may still be used when "private mode" or private repositories has been enabled, but because it is an anonymous protocol, it can only be used to pull public repositories. The `git-daemon` has full authorization support, which means it will prevent access to repositories that are locked down through other measures than database authorization.
 
 ## Git over SSH ##
 
