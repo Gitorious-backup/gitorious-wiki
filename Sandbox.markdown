@@ -59,3 +59,9 @@ An image: ![Image](http://gitorious.org/images/logo-cube-text.png)
 This edit is done locally and pushed over Git
 
 This is so cool you won't believe it
+
+# A trivial play with [markdown][]
+
+Foom
+
+[markdown] http://not.real.at.all
