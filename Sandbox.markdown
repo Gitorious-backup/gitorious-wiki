@@ -64,4 +64,4 @@ This is so cool you won't believe it
 
 Foom
 
-[markdown] http://not.real.at.all
+[markdown]: http://not.real.at.all
