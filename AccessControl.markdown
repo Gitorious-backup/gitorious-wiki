@@ -11,7 +11,7 @@ A collaborator to a project can also edit the wiki.
 
 
 ## Private repositories
-When a repository in a project is made private, only _repository collaborators_ can see it.
+When a repository in a project is made private, only _repository collaborators_ and users with _read access_ can see it.
 
 Repository collaborators may get different access levels:
 - Review
