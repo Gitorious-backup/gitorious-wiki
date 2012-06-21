@@ -17,6 +17,7 @@ This wiki is intended for the community, feel free to add or edit content. There
 * [[Upgrading]]
 * [[CodingStyleGuide]]
 * [[GitAuthentication]] How Gitorious authenticates `git push`es
+* [[AccessControl]] - Private Repositories
 * [[GitoriousComponents]] A description of Gitorious' various parts
 * [[ErrorMessages]] Error messages you may encounter in your own Gitorious installation
 * [[Api]] - programmatic access to a Gitorious installation
