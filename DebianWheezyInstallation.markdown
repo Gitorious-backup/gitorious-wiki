@@ -1,7 +1,7 @@
 This article is a rip off [[DebianSqueezeInstallation]]. Many thanks to the author of that document for the work he put in. Installing and maintaining Gitorious on your own server running Debian Wheezy is much easier, as all you need (Ruby 1.8, Sphinx 2.x, ActiveMQ) can be installed and updated via Debian's package manager.
 # Install packages
     # If you use MariaDB instead of MySQL, s/mysql/mariadb/g
-    apt-get install build-essential ruby1.8-dev ruby-switch libapache2-mod-passenger libapache2-mod-xsendfile activemq mysql-server mysql-client sphinxsearch git apg imagemagick unzip libmysqlclient-dev libxslt1-dev
+    apt-get install build-essential ruby1.8-dev ruby-switch bundler libapache2-mod-passenger libapache2-mod-xsendfile activemq mysql-server mysql-client sphinxsearch git apg imagemagick unzip libmysqlclient-dev libxml2-dev libxslt1-dev
 
 # Fetch Gitorious
 
@@ -108,7 +108,7 @@ If rake aborts with `uninitialized constant ActiveSupport::Dependencies::Mutex`,
 * Restart Apache:
         service apache2 restart
 
-# Console User Administration:
+# Console User Administration
      su - git
      env RAILS_ENV=production script/console
 
