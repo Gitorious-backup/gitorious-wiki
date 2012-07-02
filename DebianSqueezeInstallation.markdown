@@ -240,8 +240,8 @@ Also see [[Configuration]].
     #
     ### BEGIN INIT INFO
     # Provides:          git-poller
-    # Required-Start:    activemq
-    # Required-Stop:  activemq
+    # Required-Start:    activemq mysql
+    # Required-Stop:  activemq mysql
     # Default-Start:     2 3 4 5
     # Default-Stop:      1
     # Short-Description: Gitorious poller
