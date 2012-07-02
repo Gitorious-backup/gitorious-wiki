@@ -11,6 +11,7 @@ For a Chef based automated install for Debian Squeeze or recent Ubuntu you can t
 * [[Rhel_Installation]] - Installation guide for RHEL 5 by some kickass team called Verso.
 * [[DebianLennyInstallation]] - Step by step instructions for install Gitorious under Debian Lenny 5.0.8
 * [[DebianSqueezeInstallation]] - Step by step instructions for install Gitorious under Debian Squeeze 6.0.0
+* [[DebianWheezyInstallation]] - Step by step instructions for install Gitorious under Debian Wheezy 7.0
 
 After installation, see [[Configuration]].
 
