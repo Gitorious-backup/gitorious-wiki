@@ -124,6 +124,7 @@ For this, I gave my git user temporary sudo access.  You could just execute this
   * `password` should be the password indicated in 2 before sections
 * Edit `config/gitorious.yml`:  Remove every section but production
   * `repository_base_path` should be something like `/var/www/gitorious/repositories`
+  * `cookie_secret` must be a long random unique string. You can call apg -m 64 to generate it.
   * `gitorious_client_port` should be 80
   * `gitorious_host` needs to be the exact hostname that clients will use (cookies get messed up otherwise)
   * `archive_cache_dir` should be something like `/var/www/gitorious/tarballs`
