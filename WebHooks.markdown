@@ -63,14 +63,19 @@ To see the actual data sent from your Gitorious server, [Postbin](http://postbin
 
 ## Enabling web hooks for your local Gitorious installation
 
-
+<blockquote>
 Since this feature needs some testing and feedback, Gitorious does not currently offer a UI for adding/maintaining web hooks. Adding one is done from the console, like this:
 
+<code>
     project = Project.find_by_slug "gitorious"
     repository = project.repositories.find_by_name "mainline"
     hook = repository.hooks.build
     hook.user = repository.user
     hook.url = "http://www.postbin.org/wqpx3l"
     hook.save
+</code>
 
 Whenever you push some commits to this repository, a request will be made to the server you specified. The Hook object in the database keeps track of the number of successful and failed requests, but URLs that continue to fail will not be deactivated.
+</blockquote>
+
+_Can you please be more specific about this step. What do you mean by: "Adding one is done from the console, like this:". Is it a ruby console? Should it be run from the gitorious installation directory??? Is it going to persist if command was issued from the console, or should the code snippet be run at every start-up? Can you may be point to the docs or write what a particular call/function does? This way one who isn't aware of Gitorious API can still use the feature._
