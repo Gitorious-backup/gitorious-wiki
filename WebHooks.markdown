@@ -78,3 +78,5 @@ To set up the hook once you're in the console run:
 </code>
 
 Whenever you push some commits to this repository, a request will be made to the server you specified. The Hook object in the database keeps track of the number of successful and failed requests, but URLs that continue to fail will not be deactivated.
+
+**Note!** Postbin service has been renamed to [RequestBin](http://requestb.in).
