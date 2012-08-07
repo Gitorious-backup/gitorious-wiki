@@ -60,6 +60,7 @@ Whenever a user pushes one or several commits to Gitorious, one JSON request wil
 
 To see the actual data sent from your Gitorious server, [Postbin](http://postbin.org/) provides a free and easy solution, simply go to their site and click "Make a Postbin". You will immediately be given a URL you can push data to, and all data is displayed by visiting this URL in your browser. 
 
+**Note!** Postbin service has been renamed to [RequestBin](http://requestb.in).
 
 ## Enabling web hooks for your local Gitorious installation
 
@@ -78,5 +79,3 @@ To set up the hook once you're in the console run:
 </code>
 
 Whenever you push some commits to this repository, a request will be made to the server you specified. The Hook object in the database keeps track of the number of successful and failed requests, but URLs that continue to fail will not be deactivated.
-
-**Note!** Postbin service has been renamed to [RequestBin](http://requestb.in).
