@@ -1,3 +1,5 @@
+*DEPRECATED* The new official project doc is now located at [getgitorious.com/documentation](http://getgitorious.com/documentation). The coding style guide will be maintained there instead going forward.
+
 Gitorious Coding Style Guide
 =============================
 
