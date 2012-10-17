@@ -1,4 +1,4 @@
-DEPRECATED: The new official project doc is now located at http://getgitorious.com/documentation, versioning and upgrade instructions will be maintained there going forward.
+*DEPRECATED* The new official project doc is now located at http://getgitorious.com/documentation, versioning and upgrade instructions will be maintained there going forward.
 
 
 # Upgrading Gitorious
