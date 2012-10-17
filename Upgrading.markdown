@@ -1,3 +1,6 @@
+DEPRECATED: The new official project doc is now located at http://getgitorious.com/documentation, versioning and upgrade instructions will be maintained there going forward.
+
+
 # Upgrading Gitorious
 
 If your version of Gitorious is really old, please start with this guide: [[LegacyUpgrade]] ("really old" = older than February 3rd 2009/92bb70a1).
