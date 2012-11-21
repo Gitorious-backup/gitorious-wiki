@@ -12,6 +12,7 @@ For a Chef based automated install for Debian Squeeze or recent Ubuntu you can t
 * [[DebianLennyInstallation]] - Step by step instructions for install Gitorious under Debian Lenny 5.0.8
 * [[DebianSqueezeInstallation]] - Step by step instructions for install Gitorious under Debian Squeeze 6.0.0
 * [[DebianWheezyInstallation]] - Step by step instructions for install Gitorious under Debian Wheezy 7.0
+* [OSXInstallation](http://www.bluequartz.net/projects/EIM_Segmentation/SCMService/html/gitorious___o_s_x__setup.html) - Step by step instructions for install of Gitorious under OSX 10.6
 
 After installation, see [[Configuration]].
 
