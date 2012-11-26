@@ -162,13 +162,13 @@ To upgrade from version 2.3.0 to 2.3.1, follow these steps:
     >> rake assets:clear
     >> touch tmp/restart.txt
 
-Upgrading from 2.3.2 to 2.4.0
+Upgrading from 2.3.2 to 2.4.1
 ----------------------------------------
 
-To upgrade from version 2.3.2 to 2.4.0, follow these steps:
+To upgrade from version 2.3.2 to 2.4.1, follow these steps:
 
     >> git fetch git://gitorious.org/gitorious/mainline.git
-    >> git merge v2.4.0
+    >> git merge v2.4.1
     >> bundle install
     >> rake assets:clear
     >> rake db:migrate
