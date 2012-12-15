@@ -1,6 +1,11 @@
 Active development happens on the git branch ":master", and we will try to keep it stable. However, the tags will receive more testing, and in general should be more reliable as a mechanism to upgrade local installs. git master should be considered "Gitorious beta" (generally stable, may have occasional issues, incomplete features a.s.o), while tags provide stable releases.
 
-For a Chef based automated install for Debian Squeeze or recent Ubuntu you can try [these instructions](https://github.com/rosenfeld/gitorious-cookbooks). There is [another one](https://github.com/fnichol/chef-gitorious) using RVM for installing Ruby and some (a little bit) outdated [instructions](http://rosenfeld.heroku.com/en/articles/2011-03-06-installing-gitorious-has-never-been-so-easy) on how to set-up it using Chef-solo.
+For a Chef based automated install for Debian Squeeze or recent Ubuntu you can try:
+
+* [this recent cookbook](http://community.opscode.com/cookbooks/gitorious) available on [github](http://github.com/brugidou/gitorious-cookbook) for single server install
+* or [these instructions](https://github.com/rosenfeld/gitorious-cookbooks).
+* There is [another one](https://github.com/fnichol/chef-gitorious) using RVM for installing Ruby
+* and some (a little bit) outdated [instructions](http://rosenfeld.heroku.com/en/articles/2011-03-06-installing-gitorious-has-never-been-so-easy) on how to set-up it using Chef-solo.
 
 ## See Also
 
