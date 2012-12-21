@@ -175,3 +175,15 @@ To upgrade from version 2.3.2 to 2.4.1, follow these steps:
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
+Upgrading patch releases in the 2.4 series
+-----------------------------------------------------------
+
+Due to our use of git-flow there have been a few patch releases in the 2.4 series. To upgrade between these:
+
+    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git merge v2.4.x
+    >> bundle install
+    >> rake assets:clear
+    >> rake db:migrate
+    >> rake ts:rebuild
+    >> touch tmp/restart.txt
