@@ -137,7 +137,11 @@ For this, I gave my git user temporary sudo access.  You could just execute this
     bundle exec rake db:create
     bundle exec rake db:migrate
     export PATH=/usr/local/sphinx/bin:$PATH
+   // Old <Branch 2.x.x and Previous>
     bundle exec rake ultrasphinx:bootstrap
+    // New <Branch 2.x.x and on>
+    bundle exec rake uthinking_sphinx:configure
+    bundle exec rake thinking_sphinx:index
 
     crontab -e
         PATH=/usr/local/sphinx/bin:/usr/bin:/bin
