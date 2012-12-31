@@ -142,10 +142,15 @@ For this, I gave my git user temporary sudo access.  You could just execute this
     // New <Branch 2.x.x and on>
     bundle exec rake uthinking_sphinx:configure
     bundle exec rake thinking_sphinx:index
-
+    
+    // Old
     crontab -e
         PATH=/usr/local/sphinx/bin:/usr/bin:/bin
         * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/bundle exec /opt/ruby-enterprise/bin/rake ultrasphinx:index RAILS_ENV=production
+    // New
+    crontab -e
+        PATH=/usr/local/sphinx/bin:/usr/bin:/bin
+        * * * * * cd /var/www/gitorious && /opt/ruby-enterprise/bin/bundle exec /opt/ruby-enterprise/bin/rake thinking_sphinx:index RAILS_ENV=production
 
 Also see [[Configuration]].
 
