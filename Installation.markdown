@@ -1,3 +1,5 @@
+**Note: the absolutely easiest way to get a Gitorious server up and running is to use the standard installer or prebuilt appliance which can be found at [the Get Gitorious](http://getgitorious.com) website.**
+
 Active development happens on the git branch ":master", and we will try to keep it stable. However, the tags will receive more testing, and in general should be more reliable as a mechanism to upgrade local installs. git master should be considered "Gitorious beta" (generally stable, may have occasional issues, incomplete features a.s.o), while tags provide stable releases.
 
 For a Chef based automated install for Debian Squeeze or recent Ubuntu you can try:
