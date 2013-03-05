@@ -13,6 +13,10 @@ For a Chef based automated install for Debian Squeeze or recent Ubuntu you can t
 
 [[Upgrading]]
 
+## Obsolete installation guides
+
+The following install guides for Gitorious have been contributed by community members. However, most of them have not been updated for a long time, and will no longer work. There are efforts underway to make Gitorious available in the package repositories for both Fedora/RHEL and Debian, which will make installation practically hassle-free. In the meantime, the easiest way to get your own Gitorious server running is to use the [Install Gitorious](http://getgitorious.com/install-gitorious) page on the getgitorious.com website. 
+
 * [[UbuntuInstallation]] - Step by step instructions for installing Gitorious under Ubuntu 9.04
 * [[Gentoo_Installation]] - The portage way.
 * [[Rhel_Installation]] - Installation guide for RHEL 5 by some kickass team called Verso.
