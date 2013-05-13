@@ -73,7 +73,7 @@ To set up the hook once you're in the console run:
     hook = repository.hooks.build
     hook.user = repository.user
     hook.url = "http://www.postbin.org/wqpx3l"
-    hook.save
+    hook.save!
 </code>
 
 Whenever you push some commits to this repository, a request will be made to the server you specified. The Hook object in the database keeps track of the number of successful and failed requests, but URLs that continue to fail will not be deactivated.
