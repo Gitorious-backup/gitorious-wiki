@@ -56,9 +56,9 @@ Whenever a user pushes one or several commits to Gitorious, one JSON request wil
 ##Testing web hooks
 
 
-To see the actual data sent from your Gitorious server, [Postbin](http://postbin.org/) provides a free and easy solution, simply go to their site and click "Make a Postbin". You will immediately be given a URL you can push data to, and all data is displayed by visiting this URL in your browser. 
+To see the actual data sent from your Gitorious server, [RequestBin](http://requestb.in) provides a free and easy solution, simply go to their site and click "Create a RequestBin". You will immediately be given a URL you can push data to, and all data is displayed by visiting this URL in your browser. 
 
-**Note!** Postbin service has been renamed to [RequestBin](http://requestb.in).
+You can also use [UltraHook](http://www.ultrahook.com) to receive webhooks while behind a firewall (i.e. to localhost). UltraHook provides software that creates a tunnel from ultrahook.com to any URL accessible from your computer.
 
 ## Enabling web hooks for your local Gitorious installation
 
