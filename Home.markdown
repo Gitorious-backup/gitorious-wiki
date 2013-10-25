@@ -1,5 +1,7 @@
 *NOTE* The new official project doc is now located at [getgitorious.com/documentation](http://getgitorious.com/documentation). We are creating and moving content there. The wiki will only be used for content that's not yet migrated to the official doc.
 
+[[Getting Started]]
+
 # Gitorious
 
 Gitorious is an opensource application originally developed for hosting open source source projects in git repositories.
