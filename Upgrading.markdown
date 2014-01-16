@@ -189,10 +189,18 @@ Due to our use of git-flow there have been a few patch releases in the 2.4 serie
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
-Upgrading from version 2.4.x to 3.0
+Upgrading from version 2.4.x to 3.0.0
 -------------------------------------------------
 
-Upgrading from version 2.4.x to 3.0, follow these steps:
+To upgrade from version 2.4.x to 3.0, follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
+
+Upgrading from version 3.0.0 to developer version
+---------------------------------------------------------------------
+
+It is possible to install the latast version directly from the developer branch,  follow these steps:
+
+    >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
+    >> sudo GITORIOUS_VERSION=master ./upgrade.sh
