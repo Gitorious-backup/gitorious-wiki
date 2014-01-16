@@ -189,8 +189,10 @@ Due to our use of git-flow there have been a few patch releases in the 2.4 serie
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
+Upgrading from version 2.4.x to 3.0
+-------------------------------------------------
+
 Upgrading from version 2.4.x to 3.0, follow these steps:
------------------------------------------------------------------------------
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
