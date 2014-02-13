@@ -203,4 +203,4 @@ Upgrading from 3.0.0 to developer version
 It is possible to install the latast version directly from the developer branch,  follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
-    >> sudo GITORIOUS_VERSION=master ./upgrade.sh
+    >> sudo GITORIOUS_VERSION="origin/master" ./upgrade.sh
