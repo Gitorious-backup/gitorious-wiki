@@ -12,7 +12,7 @@ This wiki is intended for the community, feel free to add or edit content. There
 * [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu and now Gentoo.
 * [[Upgrading]]
 * [[CodingStyleGuide]]
-* [[GitAuthentication]] How Gitorious authenticates `git push`es
+* [[GitAuthentication]] How Gitorious authenticates `git push`
 * [[AccessControl]] - Private Repositories
 * [[GitoriousComponents]] A description of Gitorious' various parts
 * [[ErrorMessages]] Error messages you may encounter in your own Gitorious installation
