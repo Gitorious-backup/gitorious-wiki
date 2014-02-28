@@ -8,7 +8,6 @@ This wiki is intended for the community, feel free to add or edit content. There
 
 ## Documentation
 
-* [[FAQ]] frequently asked questions
 * [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu and now Gentoo.
 * [[Upgrading]]
 * [[CodingStyleGuide]]
