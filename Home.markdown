@@ -6,13 +6,9 @@ Gitorious is an opensource application originally developed for hosting open sou
 
 This wiki is intended for the community, feel free to add or edit content. There's also a [mailinglist](http://groups.google.com/group/gitorious) and the `#gitorious` channel on `irc.freenode.net`.
 
-[[Sandbox]] for the curious...
-
 ## Documentation
 
 * [[FAQ]] frequently asked questions
-* [[Wishlist]] request features or submit bugs
-* [[Todo]] a random collection of things close on the horizon
 * [[Installation]] Install instructions for InstallingOnCentOS or InstallingOnUbuntu and now Gentoo.
 * [[Upgrading]]
 * [[CodingStyleGuide]]
