@@ -24,32 +24,10 @@ The messaging server
 
 Some operations Gitorious performs take too long to run for the user to wait for it to complete before a page is rendered. Cloning a large Git repository, for example, can take several minutes to complete. 
 
-Gitorious solves this by creating a message describing the operation that should be performed, and sending this off to a separate process. This is achieved using [the ActiveMessaging plugin](http://code.google.com/p/activemessaging/). This plugin supports a number of different message queue services; the config/broker.yml file defines which service you use.
+Gitorious solves this by creating a message describing the operation that should be performed, and sending this off to a separate process. This is achieved using [Resque](https://github.com/resque/resque).
 
-Gitorious.org uses [Apache ActiveMQ](http://activemq.apache.org), a java based messaging server. Gitorious ships with a description on how to get ActiveMQ running in the doc/recipes directory.
+Furthermore, you'll probably want to make sure it hasn't died or takes up too much memory. Have a look at [Monit](http://mmonit.com/monit/) if you don't already have a tool to monitor long running processes on your server. 
 
-Whichever message queue you use, it needs to be available (for local servers, this means they need to be running) for Gitorious to work. If you get the error message
-
-    can't convert Errno::ECONNREFUSED into String
-
-, it means the message server isn't running. In a production environment you'll want your MQ server to start on boot, the doc/recipes/install_ubuntu.txt file tells you how to do this with ActiveMQ on Debian-like systems.
-
-The poller script
------------------
-
-Just sending the messages off to the message queue, is only half the story. You'll need to fetch the messages off the queue and do something with them too. Gitorious has a script intended for this, located in script/poller. This is a Ruby script that can be run as a daemon (best for production environments) or in the console.
-
-    RAILS_ENV=production script/poller run 
-
-will start the poller script in the console,
-
-    RAILS_ENV=production script/poller start
-
-will start it as a daemon, and
-
-    RAILS_ENV=production script/poller stop
-
-will stop a daemonized poller. Again, in a production environment you'll want this script to be started automatically. Furthermore, you'll probably want to make sure it hasn't died or takes up too much memory. Have a look at [Monit](http://mmonit.com/monit/) if you don't already have a tool to monitor long running processes on your server. 
 
 The git daemon
 --------------
