@@ -1,7 +1,3 @@
-*DEPRECATED* The new official project doc is now located at [getgitorious.com/documentation](http://getgitorious.com/documentation). Versioning and upgrade instructions will be maintained there going forward.
-
-[Phusion Passenger](http://www.modrails.com/) 
-
 # Upgrading Gitorious
 
 If your version of Gitorious is really old, please start with this guide: [[LegacyUpgrade]] ("really old" = older than February 3rd 2009/92bb70a1).
