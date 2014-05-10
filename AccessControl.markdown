@@ -1,3 +1,6 @@
+This his my wikiPage
+
+
 By default, all projects and repositories in Gitorious are public. But if you have your own Gitorious installation, you may make both projects and repositories private.
 
 
