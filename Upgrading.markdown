@@ -4,8 +4,7 @@ If your version of Gitorious is really old, please start with this guide: [[Lega
 
 If your version Gitorious is only a little old, refer to [[BundlerSetup]] ("a little old" = older than January 24th 2011/c44237f).
 
-The changelog tool
-===============
+## The changelog tool
 
 Since Gitorious 2.0.0 (see [[Versioning]]), Gitorious ship with a simple 
 changelog tool. The tool consists of a single rake task that can tell you what version you are currently on and what versions are available to you. To use it, invoke the following command from the root of your installation:
@@ -18,21 +17,17 @@ To display a changelog for changes between your current version and another vers
 
     bundle exec rake changelog VERSION=2.0.1
 
-Before upgrading
-============
+## Before upgrading
 
 No matter how simple an upgrade may look, we strongly encourage you to always back up your database and repository data prior to upgrades. If nothing else, an upgrade is a good time to get some snapshots if you don't already have scheduled backups of your system. It's also a good idea to keep a copy of Gitorious configuration files outside the actual install.
 
-Upgrading customized installs
--------------------------------------------
+### Upgrading customized installs
 
 If your Gitorious setup has changes, you may experience conflicts when pulling in changes. It is recommended to push your patched version of Gitorious somewhere, for example to itself, so you can easily clone Gitorious to a local machine, or somewhere else on the server to make sure that the patch will apply cleanly before attempting the upgrade.
 
-Upgrading
-=======
+## Upgrading
 
-From 2.0.x to 2.1
--------------------------
+### From 2.0.x to 2.1
 
 You can upgrade directly from any 2.0.x version directly to 2.1.0. Start by reviewing changes:
 
@@ -53,8 +48,7 @@ Then restart your server (assuming you're using Passenger):
 
     >> touch tmp/restart.txt
 
-From 2.1.x to 2.2
--------------------------
+### From 2.1.x to 2.2
 
 You can upgrade directly from any 2.1.x version directly to 2.2.0.
 
@@ -75,8 +69,7 @@ Then restart your server (assuming you're using Passenger):
 
 If you want to use the new [private repositories feature](https://gitorious.org/gitorious/pages/PrivateRepositories), set the `enable_private_repositories` setting to `true` in config/gitorious.yml. See the sample configuration in config/gitorious.sample.yml for more information.
 
-From 2.2.x to 2.3
--------------------------
+### From 2.2.x to 2.3
 
 You can upgrade directly from any 2.2.x version directly to 2.3.0.
 
@@ -95,8 +88,7 @@ Then restart your server (assuming you're using Passenger):
 
     >> touch tmp/restart.txt
 
-From 2.3.0 to 2.3.1
----------------------------
+### From 2.3.0 to 2.3.1
 
 To upgrade from version 2.3.0 to 2.3.1, follow these steps:
 
@@ -107,8 +99,7 @@ To upgrade from version 2.3.0 to 2.3.1, follow these steps:
     >> git submodule --init update
     >> touch tmp/restart.txt
 
-From 2.3.2 to 2.4.1
-----------------------------
+### From 2.3.2 to 2.4.1
 
 To upgrade from version 2.3.2 to 2.4.1, follow these steps:
 
@@ -121,8 +112,7 @@ To upgrade from version 2.3.2 to 2.4.1, follow these steps:
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
-From 2.4.x to 2.4.12 (latest 2.4 patch release)
-------------------------------------------------------------------
+### From 2.4.x to 2.4.12 (latest 2.4 patch release)
 
 Due to our use of git-flow there have been a few patch releases in the 2.4 series. To upgrade between these:
 
@@ -135,31 +125,27 @@ Due to our use of git-flow there have been a few patch releases in the 2.4 serie
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
-From 2.4.x to latest 3.0.x
--------------------------------------
+### From 2.4.x to latest 3.0.x
 
 To upgrade from 2.4.x to latest 3.0.x, follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
 
-From 3.0.x to 3.0.4 (latest 3.0 patch release)
-----------------------------------------------------------------
+### From 3.0.x to 3.0.4 (latest 3.0 patch release)
 
-To upgrade from any 3.0.x version to latest 3.0.x, follow these steps:
+To upgrade from any 3.0.x version to the latest 3.0.x, follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
 
-From 3.0.x to latest development version
------------------------------------------------------------
+### From 3.0.x to the latest development version
 
 It is possible to install the latest version directly from the development branch,  follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo GITORIOUS_VERSION="origin/master" ./upgrade.sh
 
-After upgrading
-===========
+## After upgrading
 
 It is advised to reboot the machine after successful upgrade.
