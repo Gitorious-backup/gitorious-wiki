@@ -7,7 +7,7 @@ If your version Gitorious is only a little old, refer to [[BundlerSetup]] ("a li
 The changelog tool
 ===============
 
-As of Gitorious 2.0.0 (see [[Versioning]]), Gitorious ship with a simple 
+Since Gitorious 2.0.0 (see [[Versioning]]), Gitorious ship with a simple 
 changelog tool. The tool consists of a single rake task that can tell you what version you are currently on and what versions are available to you. To use it, invoke the following command from the root of your installation:
 
     bundle exec rake changelog
