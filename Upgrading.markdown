@@ -185,7 +185,7 @@ Due to our use of git-flow there have been a few patch releases in the 2.4 serie
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
-Upgrading from version 2.4.x to latest 3.0.x
+Upgrading from 2.4.x to latest 3.0.x
 -------------------------------------------------
 
 To upgrade from 2.4.x to latest 3.0.x, follow these steps:
