@@ -1,6 +1,6 @@
 # Gitorious
 
-Gitorious is an opensource application originally developed for hosting open source source projects in git repositories.
+Gitorious is an open-source application originally developed for hosting open source source projects in git repositories.
 
 ## Community
 
