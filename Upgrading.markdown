@@ -127,14 +127,14 @@ Due to our use of git-flow there have been a few patch releases in the 2.4 serie
 
 ### From 2.4.x to latest 3.x
 
-To upgrade from 2.4.x to latest 3.x, follow these steps:
+To upgrade from 2.4.x to latest 3.x (3.2 as of now), follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
 
 ### From 3.x to 3.2
 
-To upgrade from any 3 minor version (3.0, 3.1) to the latest 3.2, follow these steps:
+To upgrade from any 3 minor version (3.0, 3.1) to the latest 3.x (3.2 as of now), follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
