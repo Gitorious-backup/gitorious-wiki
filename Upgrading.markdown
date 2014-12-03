@@ -132,20 +132,9 @@ To upgrade from 2.4.x to latest 3.x, follow these steps:
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
 
-### From 3.0.x to 3.1
+### From 3.x to 3.2
 
-To upgrade from any 3.0.x version to the latest 3.1, follow these steps:
+To upgrade from any 3 minor version (3.0, 3.1) to the latest 3.2, follow these steps:
 
     >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
-
-### From 3.x to the latest development version
-
-It is possible to install the latest version directly from the development branch,  follow these steps:
-
-    >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
-    >> sudo GITORIOUS_VERSION="origin/master" ./upgrade.sh
-
-## After upgrading
-
-It is advised to reboot the machine after successful upgrade.
