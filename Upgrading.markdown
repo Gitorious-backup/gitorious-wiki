@@ -35,7 +35,7 @@ You can upgrade directly from any 2.0.x version directly to 2.1.0. Start by revi
 
 If this looks good, back up everything (see above), and get started:
 
-    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git fetch https://gitorious.org/gitorious/mainline.git
     >> git merge v2.1.0
     >> rake assets:clear
     >> git submodule --init update
@@ -54,7 +54,7 @@ You can upgrade directly from any 2.1.x version directly to 2.2.0.
 
 First back up everything (see above), and then get started:
 
-    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git fetch https://gitorious.org/gitorious/mainline.git
     >> git merge v2.2.0
     >> rake assets:clear
     >> git submodule --init update
@@ -75,7 +75,7 @@ You can upgrade directly from any 2.2.x version directly to 2.3.0.
 
 First back up everything (see above), and then get started:
 
-    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git fetch https://gitorious.org/gitorious/mainline.git
     >> git merge v2.3.0
     >> rake assets:clear
     >> git submodule --init update
@@ -92,7 +92,7 @@ Then restart your server (assuming you're using Passenger):
 
 To upgrade from version 2.3.0 to 2.3.1, follow these steps:
 
-    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git fetch https://gitorious.org/gitorious/mainline.git
     >> git merge v2.3.1
     >> bundle install
     >> rake assets:clear
@@ -103,7 +103,7 @@ To upgrade from version 2.3.0 to 2.3.1, follow these steps:
 
 To upgrade from version 2.3.2 to 2.4.1, follow these steps:
 
-    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git fetch https://gitorious.org/gitorious/mainline.git
     >> git merge v2.4.1
     >> bundle install
     >> rake assets:clear
@@ -116,7 +116,7 @@ To upgrade from version 2.3.2 to 2.4.1, follow these steps:
 
 Due to our use of git-flow there have been a few patch releases in the 2.4 series. To upgrade between these:
 
-    >> git fetch git://gitorious.org/gitorious/mainline.git
+    >> git fetch https://gitorious.org/gitorious/mainline.git
     >> git merge v2.4.x
     >> bundle install
     >> rake assets:clear
@@ -125,16 +125,9 @@ Due to our use of git-flow there have been a few patch releases in the 2.4 serie
     >> rake ts:rebuild
     >> touch tmp/restart.txt
 
-### From 2.4.x to latest 3.x
+### From 2.4.x / 3.x to latest 3.x
 
-To upgrade from 2.4.x to latest 3.x (3.2 as of now), follow these steps:
+To upgrade from Gitorious 2.4.x or 3.x to latest stable release (3.2 as of now), follow these steps:
 
-    >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
-    >> sudo ./upgrade.sh
-
-### From 3.x to 3.2
-
-To upgrade from any 3 minor version (3.0, 3.1) to the latest 3.x (3.2 as of now), follow these steps:
-
-    >> git clone https://git.gitorious.org/gitorious/ce-installer.git && cd ce-installer
+    >> git clone https://gitorious.org/gitorious/ce-installer.git && cd ce-installer
     >> sudo ./upgrade.sh
