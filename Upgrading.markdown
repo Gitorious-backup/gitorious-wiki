@@ -1,8 +1,8 @@
 # Upgrading Gitorious
 
-If your version of Gitorious is really old, please start with this guide: [[LegacyUpgrade]] ("really old" = older than February 3rd 2009/92bb70a1).
+If your version of Gitorious is really old (older than February 3rd 2009/92bb70a1), please start with this guide: [[LegacyUpgrade]].
 
-If your version Gitorious is only a little old, refer to [[BundlerSetup]] ("a little old" = older than January 24th 2011/c44237f).
+If your version Gitorious is only a little old (older than January 24th 2011/c44237f), refer to [[BundlerSetup]].
 
 ## The changelog tool
 
