@@ -31,22 +31,22 @@ If your Gitorious setup has changes, you may experience conflicts when pulling i
 
 You can upgrade directly from any 2.0.x version directly to 2.1.0. Start by reviewing changes:
 
-    >> bundle exec rake changelog VERSION=2.1.0
+    bundle exec rake changelog VERSION=2.1.0
 
 If this looks good, back up everything (see above), and get started:
 
-    >> git fetch https://gitorious.org/gitorious/mainline.git
-    >> git merge v2.1.0
-    >> rake assets:clear
-    >> git submodule --init update
+    git fetch https://gitorious.org/gitorious/mainline.git
+    git merge v2.1.0
+    rake assets:clear
+    git submodule --init update
 
 Upgrade the database:
 
-    >> rake db:migrate
+    rake db:migrate
 
 Then restart your server (assuming you're using Passenger):
 
-    >> touch tmp/restart.txt
+    touch tmp/restart.txt
 
 ### From 2.1.x to 2.2
 
@@ -54,18 +54,18 @@ You can upgrade directly from any 2.1.x version directly to 2.2.0.
 
 First back up everything (see above), and then get started:
 
-    >> git fetch https://gitorious.org/gitorious/mainline.git
-    >> git merge v2.2.0
-    >> rake assets:clear
-    >> git submodule --init update
+    git fetch https://gitorious.org/gitorious/mainline.git
+    git merge v2.2.0
+    rake assets:clear
+    git submodule --init update
 
 Upgrade the database:
 
-    >> rake db:migrate
+    rake db:migrate
 
 Then restart your server (assuming you're using Passenger):
 
-    >> touch tmp/restart.txt
+    touch tmp/restart.txt
 
 If you want to use the new [private repositories feature](https://gitorious.org/gitorious/pages/PrivateRepositories), set the `enable_private_repositories` setting to `true` in config/gitorious.yml. See the sample configuration in config/gitorious.sample.yml for more information.
 
@@ -75,59 +75,59 @@ You can upgrade directly from any 2.2.x version directly to 2.3.0.
 
 First back up everything (see above), and then get started:
 
-    >> git fetch https://gitorious.org/gitorious/mainline.git
-    >> git merge v2.3.0
-    >> rake assets:clear
-    >> git submodule --init update
+    git fetch https://gitorious.org/gitorious/mainline.git
+    git merge v2.3.0
+    rake assets:clear
+    git submodule --init update
 
 Upgrade the database:
 
-    >> rake db:migrate
+    rake db:migrate
 
 Then restart your server (assuming you're using Passenger):
 
-    >> touch tmp/restart.txt
+    touch tmp/restart.txt
 
 ### From 2.3.0 to 2.3.1
 
 To upgrade from version 2.3.0 to 2.3.1, follow these steps:
 
-    >> git fetch https://gitorious.org/gitorious/mainline.git
-    >> git merge v2.3.1
-    >> bundle install
-    >> rake assets:clear
-    >> git submodule --init update
-    >> touch tmp/restart.txt
+    git fetch https://gitorious.org/gitorious/mainline.git
+    git merge v2.3.1
+    bundle install
+    rake assets:clear
+    git submodule --init update
+    touch tmp/restart.txt
 
 ### From 2.3.2 to 2.4.1
 
 To upgrade from version 2.3.2 to 2.4.1, follow these steps:
 
-    >> git fetch https://gitorious.org/gitorious/mainline.git
-    >> git merge v2.4.1
-    >> bundle install
-    >> rake assets:clear
-    >> git submodule --init update
-    >> rake db:migrate
-    >> rake ts:rebuild
-    >> touch tmp/restart.txt
+    git fetch https://gitorious.org/gitorious/mainline.git
+    git merge v2.4.1
+    bundle install
+    rake assets:clear
+    git submodule --init update
+    rake db:migrate
+    rake ts:rebuild
+    touch tmp/restart.txt
 
 ### From 2.4.x to 2.4.12 (latest 2.4 patch release)
 
 Due to our use of git-flow there have been a few patch releases in the 2.4 series. To upgrade between these:
 
-    >> git fetch https://gitorious.org/gitorious/mainline.git
-    >> git merge v2.4.x
-    >> bundle install
-    >> rake assets:clear
-    >> git submodule --init update
-    >> rake db:migrate
-    >> rake ts:rebuild
-    >> touch tmp/restart.txt
+    git fetch https://gitorious.org/gitorious/mainline.git
+    git merge v2.4.x
+    bundle install
+    rake assets:clear
+    git submodule --init update
+    rake db:migrate
+    rake ts:rebuild
+    touch tmp/restart.txt
 
 ### From 2.4.x / 3.x to latest 3.x
 
 To upgrade from Gitorious 2.4.x or 3.x to latest stable release (3.2 as of now), follow these steps:
 
-    >> git clone https://gitorious.org/gitorious/ce-installer.git && cd ce-installer
-    >> sudo ./upgrade.sh
+    git clone https://gitorious.org/gitorious/ce-installer.git && cd ce-installer
+    sudo ./upgrade.sh
