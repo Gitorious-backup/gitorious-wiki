@@ -37,7 +37,6 @@ Javascript
 * Always use a single space after a keyword, and before a curly brace.
 * Curly braces goes on the same line.
 
-
     // Wrong
     function foo (arg){
     // Wrong
@@ -86,6 +85,7 @@ CSS
     \#baz p#quux span.foo {
         ...
     }
+
 * Opening brace is on the same line as the selector.
 
 
