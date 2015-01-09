@@ -6,12 +6,15 @@ It can be used on the official public instance, or as a self-hosted service. Bot
 
 ## Community
 
-This wiki is intended for the community, feel free to add or edit content. There's also a [mailing list](http://groups.google.com/group/gitorious) and the `#gitorious` channel on `chat.freenode.net` ([web IRC](http://webchat.freenode.net/?channels=%23gitorious)).
+This wiki is intended for the community, feel free to add or edit content. There's also a [mailing list](http://groups.google.com/group/gitorious) and the `#gitorious` IRC channel on `chat.freenode.net` ([web IRC](http://webchat.freenode.net/?channels=%23gitorious)).
 
-## User documentation
+## Installation and upgrading
 
 * [[Installation]]: installation instructions for **CentOS**
 * [[Upgrading]]: how to upgrade from a previous version
+
+## User documentation
+
 * [[GitAuthentication]]: how Gitorious authenticates `git push`
 * [[PrivateRepositories]]: how to enable private repositories on your self-hosted installation
 * [[AccessControl]]: private repositories
