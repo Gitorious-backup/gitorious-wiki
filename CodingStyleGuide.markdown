@@ -16,9 +16,9 @@ General Guidelines
 --------------------
 
 * Lines should stay below 80 chars or so.
-* No tabs.
+* **No tabs, use spaces.**
 * Don't get too clever.
-* No trailing whitespace
+* No trailing whitespace.
 
 
 Ruby
@@ -30,12 +30,12 @@ Generally the points in Christian Neukirchens [RUBY-STYLE](http://github.com/chn
 Javascript
 --------------------
 
-* 4 spaces, no tabs
-* 80 chars or less line length
-* Local variables must use the `var` keyword
-* Use (one) blank line to group statements together where suited
+* **4-space indent. No tabs.**
+* 80 chars or less line length.
+* Local variables must use the `var` keyword.
+* Use (one) blank line to group statements together where suited.
 * Always use a single space after a keyword, and before a curly brace.
-* Curly braces goes on the same line
+* Curly braces goes on the same line.
 
 
     // Wrong
@@ -74,9 +74,8 @@ However, long boolean expressions should be avoided in the first place.
 CSS
 --------------------
 
-* four space indent
-* no tabs
-* multiple selectors on seperate lines, unless singleworded
+* **4-space indent. No tabs.**
+* Multiple selectors are on seperate lines, unless single-worded.
 
     /* wrong */
     \#foo #bar div.foo, #baz p#quux span.foo {
@@ -87,12 +86,11 @@ CSS
     \#baz p#quux span.foo {
         ...
     }
-* Opening brace on the same line as the selector
+* Opening brace is on the same line as the selector.
 
 
 HTML
 --------------------
 
-* 2 spaces indendation
-* No tabs
-* Prefer to indent deep nesting on a newline+indent, so the structure is easier to follow
+* **2-space indent. No tabs.**
+* Prefer to indent deep nesting on a newline + indent, so the structure is easier to follow.
