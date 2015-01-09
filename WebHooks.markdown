@@ -1,6 +1,6 @@
 # Web hooks in Gitorious 
 
-Note: This page is currently intended for local Gitorious installations, since this feature is not offered as part of Gitorious.org yet.
+**Note:** this page is currently intended for local Gitorious installations, since this feature is not offered as part of Gitorious.org yet.
 
 Gitorious requires several [Git hooks](http://www.kernel.org/pub/software/scm/git/docs/githooks.html) to work properly; these are used for checking permissions, logging push events and so on. Users are free to other hooks to their local repositories, but sharing these can be cumbersome. 
 
@@ -11,9 +11,9 @@ Note that you need to set up a web server that receives and handles this informa
 
 The overall functionality is as follows:
 
-* each repository can have one or several web hooks set up
-* whenever a commit is pushed to Gitorious, Gitorious will attempt to connect to the URL associated with the web hooks - if any 
-* Gitorious will send a HTTP payload in JSON format, containing a summary of who pushed
+* each repository can have one or several web hooks set up,
+* whenever a commit is pushed to Gitorious, Gitorious will attempt to connect to the URL associated with the web hooks - if any,
+* Gitorious will send a HTTP payload in JSON format, containing a summary of who pushed.
 
 ## An example of the payload
 
