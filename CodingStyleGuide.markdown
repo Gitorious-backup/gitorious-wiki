@@ -3,7 +3,7 @@
 Gitorious Coding Style Guide
 =============================
 
-As Gitorious is a codebase of decent size (by Ruby standards at least), we try to adhere to a few guidelines to keep the codebase satisfying to look at. This document outlines the main points we try to follow.
+**As Gitorious is a codebase of decent size (by Ruby standards at least), we try to adhere to a few guidelines to keep the codebase satisfying to look at.** This document outlines the main points we try to follow.
 
 The one thing to take with you from this document is that there's some level of flexibility in the "rules" outlined below, but most important thing is that your code _should look good_ and be easily _readable_ and _understandable_ for every one else. The Gitorious codebase has its dark corners, possibly filled with dragons, but we try to improve things as we see them, "leave the source in a better state than you found it" is solid advice.
 
