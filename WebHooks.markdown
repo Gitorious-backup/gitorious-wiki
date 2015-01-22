@@ -1,6 +1,6 @@
 # Web hooks in Gitorious 
 
-**Note:** this page is currently intended for local Gitorious installations, since this feature is not offered as part of Gitorious.org yet.
+**Note:** this page is currently intended for local Gitorious installations, since this feature is not offered as part of Gitorious.org yet. **20150122: note appears to be out of date, as https://gitorious.org/PROJECT/REPO/services/web_hook seems to allow one to set up web hooks on Gitorious.org**
 
 Gitorious requires several [Git hooks](http://www.kernel.org/pub/software/scm/git/docs/githooks.html) to work properly; these are used for checking permissions, logging push events and so on. Users are free to other hooks to their local repositories, but sharing these can be cumbersome. 
 
